@@ -5,6 +5,7 @@ body
 {
 	background-color:#FFCC66;
 	font-family:Arial, Helvetica, sans-serif;
+	padding:0px;
 }
 
 #main_content
@@ -13,7 +14,7 @@ body
 	position:absolute;
 	left:50%;
 	margin-left:-400px;
-	background-color:#CCCCCC;
+	background-color:#CC9966;
 }
 
 #header
@@ -32,11 +33,12 @@ body
 
 #nav_header,#login_header
 {
+	height:20px;
 	text-align:center;
 	color:#FFFFFF;
 	font-size:16px;
 	font-weight:bolder;
-	background-color:#003399;
+	background-image:url(nav_header.png);
 }
 
 #nav_content,#login_content
@@ -59,6 +61,16 @@ body
 #nav input
 {
 	width:90px;
+}
+
+#nav a
+{
+	color:#003399;
+}
+
+#nav a:hover
+{
+	color:#00CCFF;
 }
 
 #nav ul
@@ -115,14 +127,16 @@ body
 	color:#FFFFFF;
 	font-size:18px;
 	font-weight:bold;
-	background-color:#003399;
 	margin-top:3px;
 	margin-bottom:3px;
-	
+	padding-left:15px;
+	height:25px;
+	background-image:url(title.png);
 }
 
 #footer
 {
+	text-align:center;
 	width:800px;
 	clear:both;
 }

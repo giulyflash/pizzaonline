@@ -41,8 +41,8 @@
 			$title="Nos menus";
 			break;
 			
-			case "pizza":
-			$page="include/pizza.php5";
+			case "crepe":
+			$page="include/crepe.php5";
 			$title="Nos pizzas";
 			break;
 			

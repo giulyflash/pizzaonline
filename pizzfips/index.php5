@@ -14,7 +14,6 @@
     <body>
     	<div id="main_content">
             <div id="header">
-            	header
             </div>
             <div id="nav">
             	<div id="login_header">
@@ -49,7 +48,7 @@
                     <ul>
                         <li><a href="index.php5?page=accueil">Accueil</a></li>
                         <li><a href="index.php5?page=menu">Nos menus</a></li>
-                        <li><a href="index.php5?page=pizza">Nos pizzas</a></li>
+                        <li><a href="index.php5?page=crepe">Nos crepes</a></li>
                         <li><a href="index.php5?page=panier">Votre panier</a></li>
                     </ul>
                 </div>
@@ -60,7 +59,7 @@
             	<?php include($page); ?>
             </div>
             <div id="footer">
-                footer
+                "La NAL, c'est bon, mangez-en!"©
             </div>
         </div>
     </body>
