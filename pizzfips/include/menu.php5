@@ -2,12 +2,17 @@
 <table>
   <tr>
     <th>Menu</th>
-    <th>Pizzas</th>
+    <th>Crepes</th>
     <th>Composition</th>
 	<th>Quantite</th>
     <th>Prix</th>
     <th>Ajouter</th>
   </tr>
+  <?php
+  	
+  
+  
+  ?> 
   <tr>
   	<td rowspan="2">Famille</td>
     <td>Margarita</td>

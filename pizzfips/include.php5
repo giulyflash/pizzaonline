@@ -37,7 +37,7 @@
 			break;
 			
 			case "menu":
-			$page="include/menu.php5";
+			$page="include/menu2.php5";
 			$title="Nos menus";
 			break;
 			
