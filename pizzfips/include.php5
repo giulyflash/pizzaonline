@@ -47,6 +47,18 @@
 			$page="include/inscription.php5";
 			$title="S'inscrire";
 			break;
+			
+			case "fin_inscription":
+			$page="include/fin_inscription.php5";
+			$title="Fin de l'inscription";
+			break;
+			
+			case "deconnexion";
+			$page="include/deconnexion.php5";
+			$title="Deconnexion";
+			session_unset();
+			session_destroy();
+			break;
 		}
 	}
 ?>

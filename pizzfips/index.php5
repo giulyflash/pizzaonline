@@ -25,7 +25,7 @@
 						if($connecte)
 						{
 							echo 'Vous etes connectes en tant que :'.$login_name.'
-					<a href="index.php5?page=inscription">S\'inscrire</a>';
+					<a href="index.php5?page=deconnexion">Se deconnecter</a>';
 						}
 						else
 						{

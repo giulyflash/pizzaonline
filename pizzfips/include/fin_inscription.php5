@@ -13,21 +13,25 @@
 		{
 			db_connect();
 			// recherche si l'utilisateur n'existe pas
-			if(db_object_single('SELECT count(*) AS nb FROM user WHERE user_login=\''.mysql_real_escape_string($_POST['subscribe_login']).'\'')->nb==0)
+			if(db_object_single('SELECT count(*) AS nb FROM client WHERE login=\''.mysql_real_escape_string($_POST['login']).'\'')->nb!=0)
 			{
-				if(db_query('INSERT INTO user(user_login, user_password, user_email) VALUES (\''.mysql_real_escape_string($_POST['subscribe_login']).'\', \''.mysql_real_escape_string($_POST['subscribe_password']).'\', \''.mysql_real_escape_string($_POST['subscribe_email']).'\')'))
+				echo '<div class="title">Erreur</div>Un utilisateur portant le meme nom existe deja, veuillez en choisir un nouveau.';
+			}
+			else
+			{
+				$query='INSERT INTO client(login, password, nom, prenom, adresse, codepostal, ville, telephone) VALUES (\''.mysql_real_escape_string($_POST['login']).'\', \''.mysql_real_escape_string($_POST['password']).'\', \''.mysql_real_escape_string($_POST['nom']).'\', \''.mysql_real_escape_string($_POST['prenom']).'\', \''.mysql_real_escape_string($_POST['adresse']).'\', \''.mysql_real_escape_string($_POST['ville']).'\', \''.mysql_real_escape_string($_POST['code_postal']).'\', \''.mysql_real_escape_string($_POST['telephone']).'\')';
+				echo $query;
+				if(db_query($query))
 				{
-					echo '<status>0</status>';
+					echo '<div class="title">Inscription terminee</div>Vous pouvez a present vous identifier avec le nom d\'utilisateur et le mot de passe que vous avez indiques.';
 				}
 				else
 				{
-					echo '<status>-1</status>';
+					echo '<div class="title">Erreur</div>Erreur de connexion a la base de données.';
 				}
 				
 			}
 		}
-		else
-		{
-			echo '<status>-1</status>';
-		}
 		db_close();
+	}
+?>

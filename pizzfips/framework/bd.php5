@@ -9,7 +9,7 @@
 		mysql_select_db($db_name, $db) or die(mysql_error());
 	}
 	
-	function db_connect($db_n)
+	function db_select_connect($db_n)
 	{
 		global $db_host;
 		global $db_login;

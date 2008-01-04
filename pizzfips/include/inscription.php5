@@ -1,5 +1,5 @@
 <div class="title">S'inscrire</div>
-<form>
+<form id="inscription_form" action="index.php5?page=fin_inscription" method="post">
 	<label for="login">Votre nom d'utilisateur (definitif)</label>
 	<input type="text" name="login" id="login" />
 	<label for="password">Votre mot de passe</label>
@@ -18,5 +18,5 @@
 	<input type="text" name="code_postal" id="code_postal" />
 	<label for="telephone">Votre telephone</label>
 	<input type="text" name="telephone" id="telephone" />
-	<input type="button" value="S\'inscrire" />
+	<input type="submit" value="S'inscrire" name="submit" id="submit" />
 </form>
