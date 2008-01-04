@@ -1,4 +1,6 @@
 <?php
+	require('param.php5');
+	require('framework/bd.php5');
 	require('include.php5');
 ?>
 
@@ -7,7 +9,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title><?php echo $title; ?></title>
-        <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="interf/stylesheet.css" media="screen" />
     </head>
     <body>
     	<div id="main_content">
@@ -19,12 +21,23 @@
                 	Login
                 </div>
                 <div id="login_content">
+                	<?php
+						if($connecte)
+						{
+							echo 'Vous etes connectes en tant que :'.$login_name.'
+					<a href="index.php5?page=inscription">S\'inscrire</a>';
+						}
+						else
+						{
+							echo ' 
                 	Login:
                     <input type="text" name="login" id="login_name" />
                     Mot de passe:
                     <input type="password" name="login" id="login_pass" />
-                    <input type="button" id="login_submit" value="S'identifier" />
-                    <a href="index.php5?page=inscription">S'inscrire</a>
+                    <input type="button" id="login_submit" value="S\'identifier" />
+                    <a href="index.php5?page=inscription">S\'inscrire</a>';
+						}
+					?>
                 </div>
             	<div id="login_footer">
                 </div>

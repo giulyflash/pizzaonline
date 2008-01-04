@@ -14,7 +14,7 @@
     <td>fromage, tomate, olive</td>
     <td>2</td>
     <td rowspan="2">30,00</td>
-    <td rowspan="2"><input type="text" name="quantite_1" id="quantite_1" value="1" /><img src="panier.gif" width="43" height="35" /></td>
+    <td rowspan="2"><input type="text" name="quantite_1" id="quantite_1" value="1" /><img src="interf/panier.gif" /></td>
   </tr>
   <tr>
     <td>Reine</td>
@@ -27,6 +27,6 @@
     <td>fromage, tomate, olive</td>
     <td>2</td>
     <td>13,00</td>
-    <td><input type="text" name="quantite_1" id="quantite_1" value="1" /><img src="panier.gif" width="43" height="35" /></td>
+    <td><input type="text" name="quantite_1" id="quantite_1" value="1" /><img src="interf/panier.gif" /></td>
   </tr>
 </table>

@@ -1,3 +1,10 @@
+<div class="title">Recherche</div>
+Ingredients
+<select>
+	<option value="id_1">Tomate</option>
+    <option value="id_2">Fromage</option>
+</select>
+
 <div class="title">Nos pizzas</div>
 <table>
   <tr>
@@ -10,13 +17,13 @@
     <td>Margarita</td>
     <td>fromage, tomate, olive</td>
     <td>7,00</td>
-    <td><input type="text" name="quantite_1" id="quantite_1" value="1" /><img src="panier.gif" width="43" height="35" /></td>
+    <td><input type="text" name="quantite_1" id="quantite_1" value="1" /><img src="interf/panier.gif" /></td>
   </tr>
   <tr>
     <td>Reine</td>
     <td>jambon, champignon, fromage, tomate, olive</td>
     <td>9,00</td>
-    <td><input type="text" name="quantite_2" id="quantite_2" value="1" /><img src="panier.gif" width="43" height="35" /></td>
+    <td><input type="text" name="quantite_2" id="quantite_2" value="1" /><img src="interf/panier.gif" /></td>
   </tr>
 </table>
 

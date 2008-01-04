@@ -1,6 +1,6 @@
-<div class="title">S\'inscrire</div>
+<div class="title">S'inscrire</div>
 <form>
-	<label for="login">Votre nom d\'utilisateur (definitif)</label>
+	<label for="login">Votre nom d'utilisateur (definitif)</label>
 	<input type="text" name="login" id="login" />
 	<label for="password">Votre mot de passe</label>
 	<input type="text" name="password" id="password" />
