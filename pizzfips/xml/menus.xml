@@ -1,0 +1,9 @@
+<Menus>
+	<Menu>
+		<Nom>Solo</Nom>
+		<Galette>1</Galette>
+		<Dessert>1</Dessert>
+		<Boisson>1</Boisson>
+		<Prix>10,00</Prix>
+	</Menu>
+</Menus>
