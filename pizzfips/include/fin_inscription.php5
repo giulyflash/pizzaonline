@@ -31,7 +31,7 @@
 				}
 				
 			}
+			db_close();
 		}
-		db_close();
 	}
 ?>

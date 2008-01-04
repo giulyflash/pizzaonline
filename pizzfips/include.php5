@@ -1,18 +1,6 @@
 <?php
-	// gestion de la connexion
 	session_start();
-	if(isset($_SESSION['user_id']))
-	{
-		$connecte=true;
-		$user_id=$_SESSION['user_id'];
-		$login_name=$_SESSION['login'];
-	}
-	else
-	{
-		$connecte=false;
-		$user_id=0;
-	}
-	
+
 	// gestion des pseudo frame
 	if(empty($_GET['page']))
 	{
@@ -21,6 +9,26 @@
 	}
 	else
 	{
+		// Connexion <> Deconnexion
+		if($_GET['page']=="connexion")
+		{
+			db_connect();
+			$query='SELECT id,login FROM client WHERE login="'.mysql_real_escape_string($_POST['login_name']).'" AND password="'.mysql_real_escape_string($_POST['login_pass']).'"';
+			$res=db_object_single($query);
+			db_close();
+			if($res)
+			{
+				$_SESSION['user_id']=$res->id;
+				$_SESSION['login']=$res->login;
+			}
+			$auth_error=($res==false);
+		}
+		else if($_GET['page']=="deconnexion")
+		{
+			session_unset();
+			session_destroy();
+		}
+		
 		switch($_GET['page'])
 		{
 			case "accueil":
@@ -53,12 +61,28 @@
 			$title="Fin de l'inscription";
 			break;
 			
+			case "connexion";
+			$page="include/connexion.php5";
+			$title="Connexion";
+			break;
+			
 			case "deconnexion";
 			$page="include/deconnexion.php5";
 			$title="Deconnexion";
-			session_unset();
-			session_destroy();
 			break;
 		}
+	}
+	
+	// gestion de la connexion
+	if(isset($_SESSION['user_id']))
+	{
+		$connecte=true;
+		$user_id=$_SESSION['user_id'];
+		$login_name=$_SESSION['login'];
+	}
+	else
+	{
+		$connecte=false;
+		$user_id=0;
 	}
 ?>

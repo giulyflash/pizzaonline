@@ -29,12 +29,13 @@
 						}
 						else
 						{
-							echo ' 
-                	Login:
-                    <input type="text" name="login" id="login_name" />
-                    Mot de passe:
-                    <input type="password" name="login" id="login_pass" />
-                    <input type="button" id="login_submit" value="S\'identifier" />
+							echo '<form action="index.php5?page=connexion" method="post">
+						<label for="login_name">Login</label>
+						<input type="text" name="login_name" id="login_name" />
+						<label for="login_name">Mot de passe</label>
+						<input type="password" name="login_pass" id="login_pass" />
+						<input type="submit" id="login_submit" value="S\'identifier" />
+					</form>
                     <a href="index.php5?page=inscription">S\'inscrire</a>';
 						}
 					?>
