@@ -5,8 +5,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:output method="xml" encoding="ISO-8859-1"/>
 
-	<xsl:template match="/">
-		<xsl:apply-templates/>
+	<xsl:template match="Menus">
+    <table>
+        <tr>
+        <th>Menu</th>
+        <th>Galette</th>
+        <th>Crepe</th>
+        <th>Boisson</th>
+        <th>Prix</th>
+        <th>Ajouter</th>
+        </tr>
+		<xsl:apply-templates select="Menu"/>
+        </table>
 	</xsl:template>
 	
 	<xsl:template match="Menu" >

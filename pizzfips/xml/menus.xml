@@ -9,4 +9,11 @@
 		<Boisson>1</Boisson>
 		<Prix>10,00</Prix>
 	</Menu>
+	<Menu>
+		<Nom>Duo</Nom>
+		<Galette>2</Galette>
+		<Crepe>2</Crepe>
+		<Boisson>2</Boisson>
+		<Prix>15,00</Prix>
+	</Menu>
 </Menus>

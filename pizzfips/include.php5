@@ -42,7 +42,7 @@
 			break;
 			
 			case "crepe":
-			$page="include/crepe.php5";
+			$page="include/crepe2.php5";
 			$title="Nos pizzas";
 			break;
 			
