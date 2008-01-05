@@ -23,7 +23,7 @@
                 	<?php
 						if($connecte)
 						{
-							echo 'Vous etes connectes en tant que :'.$login_name.'
+							echo 'Vous etes connectes en tant que : <a href="index.php5?page=profil">'.$login_name.'</a><br />
 					<a href="index.php5?page=deconnexion">Se deconnecter</a>';
 						}
 						else

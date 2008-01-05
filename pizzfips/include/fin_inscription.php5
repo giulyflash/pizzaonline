@@ -1,5 +1,5 @@
 <?php
-	if(!isset($_POST['login']) || !isset($_POST['password']) || !isset($_POST['password_2']) || !isset($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['adresse']) || empty($_POST['ville']) || empty($_POST['code_postal']) || empty($_POST['telephone']))
+	if(empty($_POST['login']) || empty($_POST['password']) || empty($_POST['password_2']) || empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['adresse']) || empty($_POST['ville']) || empty($_POST['code_postal']) || empty($_POST['telephone']))
 	{
 		echo '<div class="title">Erreur</div>Tous les champs n\'ont pas ete remplis correctement.';
 	}

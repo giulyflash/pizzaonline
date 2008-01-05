@@ -134,6 +134,12 @@ body
 	background-image:url(title.png);
 }
 
+.group
+{
+	border:1px solid #000000;
+	padding:1px;
+}
+
 #footer
 {
 	text-align:center;

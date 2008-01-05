@@ -3,9 +3,9 @@
 	<label for="login">Votre nom d'utilisateur (definitif)</label>
 	<input type="text" name="login" id="login" />
 	<label for="password">Votre mot de passe</label>
-	<input type="text" name="password" id="password" />
+	<input type="password" name="password" id="password" />
 	<label for="password_2">Votre mot de passe (confirmation)</label>
-	<input type="text" name="password_2" id="password_2" />
+	<input type="password" name="password_2" id="password_2" />
 	<label for="nom">Votre nom</label>
 	<input type="text" name="nom" id="nom" />
 	<label for="prenom">Votre prenom</label>

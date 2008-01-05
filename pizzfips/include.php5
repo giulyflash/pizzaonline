@@ -43,7 +43,7 @@
 			
 			case "crepe":
 			$page="include/crepe2.php5";
-			$title="Nos pizzas";
+			$title="Nos crepes";
 			break;
 			
 			case "panier":
@@ -61,14 +61,24 @@
 			$title="Fin de l'inscription";
 			break;
 			
-			case "connexion";
+			case "connexion":
 			$page="include/connexion.php5";
 			$title="Connexion";
 			break;
 			
-			case "deconnexion";
+			case "deconnexion":
 			$page="include/deconnexion.php5";
 			$title="Deconnexion";
+			break;
+			
+			case "profil":
+			$page="include/profil.php5";
+			$title="Modifier votre profil";
+			break;
+			
+			case "fin_profil":
+			$page="include/fin_profil.php5";
+			$title="Fin de la modifier de votre profil";
 			break;
 		}
 	}
