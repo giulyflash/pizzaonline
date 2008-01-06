@@ -62,14 +62,4 @@ if($_POST['send']==1 ){
 		echo"</form></table>";
 	}
 
-	
-	$xsl = new DOMDocument;
-	$xsl->load("xslt/AffMenu.xsl");
-	
-	// Configuration du transformateur
-	$proc = new XSLTProcessor;
-	$proc->importStyleSheet($xsl); // attachement des règles xsl
-	
-	$res=$proc->transformToXML($xml);
-	print "$res";
 ?>
