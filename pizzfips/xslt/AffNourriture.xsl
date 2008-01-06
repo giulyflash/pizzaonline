@@ -62,6 +62,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
              <form action="index.php5?page=ajouter_article" method="post">
                 <input type="hidden" name="type" value="galette" />
 				<input type="hidden" name="description" value="{$nom}" />
+                <input type="hidden" name="id" value="{$id}" />
                 <input type="hidden" name="prix" value="{$prix}" />
 				<input type="text" name="quantite" value="1" />
                 <input type="image" src="interf/panier.gif" />

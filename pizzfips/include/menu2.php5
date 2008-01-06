@@ -15,7 +15,7 @@ if($_POST['send']==1 ){
 	$xml->load("xml/menus.xml");
 	
 	$Nouriturexml = new DOMDocument;
-	$Nouriturexml->load("xml/nouriture.xml");
+	$Nouriturexml->load("xml/nourriture.xml");
 	
 	$listeMenus = $xml->getElementsByTagName('Menu');
 	$listeGalettes = $Nouriturexml->getElementsByTagName('Galette');
