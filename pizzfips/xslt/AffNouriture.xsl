@@ -49,37 +49,77 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</xsl:template>
 	
 	<xsl:template match="Creperie/Galette" >
+    	<xsl:variable name="nom" select="Nom"/>
+        <xsl:variable name="prix" select="Prix"/>
     	<tr>
-            <td><xsl:value-of select="Nom"/></td>
+            <td><xsl:copy-of select="$nom" /></td>
             <td>
             <xsl:apply-templates select="Ingredients/Ingredient" />
             </td>
-            <td><xsl:value-of select="Prix"/></td>
-   			<td><input type="text" name="quantite_2" id="quantite_2" value="1" /><img src="interf/panier.gif" /></td>
+            <td><xsl:copy-of select="$prix"/></td>
+            <td>
+             <form action="index.php5?page=ajouter_article" method="post">
+                <input type="hidden" name="type" value="galette" />
+				<input type="hidden" name="valeur" value="{$nom}" />
+                <input type="hidden" name="prix" value="{$prix}" />
+				<input type="text" name="quantite" value="1" />
+                <input type="image" src="interf/panier.gif" />
+            </form>
+            </td>
         </tr>	
 	</xsl:template>
     <xsl:template match="Creperie/Crepe" >
+    	<xsl:variable name="nom" select="Nom"/>
+        <xsl:variable name="prix" select="Prix"/>
     	<tr>
-            <td><xsl:value-of select="Nom"/></td>
+            <td><xsl:copy-of select="$nom" /></td>
             <td>
             <xsl:apply-templates select="Ingredients/Ingredient" />
             </td>
-            <td><xsl:value-of select="Prix"/></td>
-   			<td><input type="text" name="quantite_3" id="quantite_3" value="1" /><img src="interf/panier.gif" /></td>
+            <td><xsl:copy-of select="$prix"/></td>
+   			 <td>
+             <form action="index.php5?page=ajouter_article" method="post">
+                <input type="hidden" name="type" value="crepe" />
+				<input type="hidden" name="valeur" value="{$nom}" />
+                <input type="hidden" name="prix" value="{$prix}" />
+				<input type="text" name="quantite" value="1" />
+                <input type="image" src="interf/panier.gif" />
+            </form>
+            </td>
         </tr>	
 	</xsl:template>
      <xsl:template match="Creperie/Boisson" >
+     	<xsl:variable name="nom" select="Nom"/>
+        <xsl:variable name="prix" select="Prix"/>
     	<tr>
-            <td><xsl:value-of select="Nom"/></td>
-            <td><xsl:value-of select="Prix"/></td>
-   			<td><input type="text" name="quantite_4" id="quantite_4" value="1" /><img src="interf/panier.gif" /></td>
+            <td><xsl:copy-of select="$nom" /></td>
+            <td><xsl:copy-of select="$prix" /></td>
+   			<td>
+             <form action="index.php5?page=ajouter_article" method="post">
+                <input type="hidden" name="type" value="boisson" />
+				<input type="hidden" name="valeur" value="{$nom}" />
+                <input type="hidden" name="prix" value="{$prix}" />
+				<input type="text" name="quantite" value="1" />
+                <input type="image" src="interf/panier.gif" />
+            </form>
+            </td>
         </tr>	
 	</xsl:template>
      <xsl:template match="Creperie/Dessert" >
+     	<xsl:variable name="nom" select="Nom"/>
+        <xsl:variable name="prix" select="Prix"/>
     	<tr>
-            <td><xsl:value-of select="Nom"/></td>
-            <td><xsl:value-of select="Prix"/></td>
-   			<td><input type="text" name="quantite_5" id="quantite_5" value="1" /><img src="interf/panier.gif" /></td>
+            <td><xsl:copy-of select="$nom" /></td>
+            <td><xsl:copy-of select="$prix" /></td>
+   			<td>
+             <form action="index.php5?page=ajouter_article" method="post">
+                <input type="hidden" name="type" value="dessert" />
+				<input type="hidden" name="valeur" value="{$nom}" />
+                <input type="hidden" name="prix" value="{$prix}" />
+				<input type="text" name="quantite" value="1" />
+                <input type="image" src="interf/panier.gif" />
+            </form>
+            </td>
         </tr>	
 	</xsl:template>
     <xsl:template match="Ingredients/Ingredient">

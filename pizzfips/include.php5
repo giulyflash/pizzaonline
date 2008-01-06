@@ -41,9 +41,14 @@
 			$title="Nos menus";
 			break;
 			
-			case "crepe":
-			$page="include/crepe.php5";
-			$title="Nos crepes";
+			case "noscrepe":
+			$page="include/nosGalettesCrepes.php5";
+			$title="Nos galettes et nos crêpes";
+			break;
+			
+			case "voscrepe":
+			$page="include/vosGalettesCrepes.php5";
+			$title="Vos galettes et crêpes personalisées";
 			break;
 			
 			case "panier":
