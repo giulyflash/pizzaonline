@@ -15,5 +15,4 @@
 			$_SESSION['panier']['article'][$_POST['type'].'-'.$_POST['id']]['quantite']+=$_POST['quantite'];
 		echo '<div class="title">Ajout effectue</div>Votre selection a ete ajoutee au panier.';
 	}
-	print_r($_SESSION);
 ?>

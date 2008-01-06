@@ -42,7 +42,7 @@
 			break;
 			
 			case "crepe":
-			$page="include/crepe.php5";
+			$page="include/crepe2.php5";
 			$title="Nos crepes";
 			break;
 			
@@ -84,6 +84,11 @@
 			case "ajouter_article":
 			$page="include/ajouter_panier_article.php5";
 			$title="Ajout d'un article a votre panier";
+			break;
+			
+			case "modifier_article":
+			$page="include/modif_panier_article.php5";
+			$title="Modification d'un article sur votre panier";
 			break;
 		}
 	}

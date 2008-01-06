@@ -24,7 +24,7 @@ Ingredients
             <input type="hidden" name="description" id="description_1" value="Margarita" />
         	<input type="hidden" name="prix" id="prix_1" value="7,00" />
     		<input type="text" name="quantite" id="quantite_1" value="1" />
-            <input type="image" img src="interf/panier.gif" />
+            <input type="image" src="interf/panier.gif" />
         </form>
     </td>
   </tr>

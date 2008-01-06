@@ -9,19 +9,22 @@
 		echo '<table>
 			<tr>
 				<th>
-					type
+					Type
 				</th>
 				<th>
-					description
+					Description
 				</th>
 				<th>
-					prix
+					Prix
 				</th>
 				<th>
-					quantite
+					Quantite
+				</th>
+				<th>
+					Modification
 				</th>
 			</tr>';
-		foreach($_SESSION['panier']['article'] as $value)
+		foreach($_SESSION['panier']['article'] as $key=>$value)
 		{
 			echo '<tr>
 				<td>
@@ -35,6 +38,23 @@
 				</td>
 				<td>
 					'.$value['quantite'].'
+				</td>
+				<td>
+					<form action="index.php5?page=modifier_article" method="post">
+						<input type="hidden" name="id" value="'.$key.'" />
+						<input type="hidden" name="type" value="reduire" />
+						<input type="image" class="modif" src="interf/panier_reduire.png" />
+					</form>
+					<form action="index.php5?page=modifier_article" method="post">
+						<input type="hidden" name="id" value="'.$key.'" />
+						<input type="hidden" name="type" value="augmenter" />
+						<input type="image" class="modif" src="interf/panier_augmenter.png" />
+					</form>
+					<form action="index.php5?page=modifier_article" method="post">
+						<input type="hidden" name="id" value="'.$key.'" />
+						<input type="hidden" name="type" value="supprimer" />
+						<input type="image" class="modif" src="interf/panier_supprimer.png" />
+					</form>
 				</td>
 			</tr>';
 		}
