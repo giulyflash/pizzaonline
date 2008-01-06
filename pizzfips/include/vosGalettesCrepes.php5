@@ -13,6 +13,7 @@
 		{
 			prix-=cout;
 		}
+		document.getElementById('custom_crepe_prix_affiche').value=prix;
 		document.getElementById('custom_crepe_prix').value=prix;
 	}
 </script>
@@ -44,7 +45,7 @@
 		<td><input type="checkbox" name="ingredient[]" value="champignon" onclick="maj_prix(this,9.00);" /></td>
 	  </tr>
       <tr>
-      	<td colspan="3">Prix : <input disabled="disabled" type="text" name="prix" id="custom_crepe_prix" value="0" /></td>
+      	<td colspan="3">Prix : <input type="text"id="custom_crepe_prix_affiche" value="0" disabled="disabled" /><input type="hidden" id="custom_crepe_prix" name="prix" value="0" /></td>
       </tr>
       <tr>
       	<td colspan="3">Quantite : <input type="text" value="1" name="quantite" id="custom_crepe_quantite" /> <input type="image" src="interf/panier.gif" /></td>
