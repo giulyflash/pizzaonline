@@ -30,12 +30,12 @@
 		
 	}
 	
-	function queryDB($sql, $type='select') 
+	function queryDB($sql, $type='select', $prefixe='./outils/') 
 	{
 		//recherche des informations de configuration
 		$result = -8;
 		$dom = new DomDocument();
-		$fileName = "outils/configuration.xml";
+		$fileName = $prefixe."configuration.xml";
 		if(!file_exists($fileName) || !$dom->Load($fileName))
 		{
 			return -3; // fichier de base inéxistant
