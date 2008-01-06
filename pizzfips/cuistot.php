@@ -3,7 +3,7 @@
     <head>
         <title>Crepaiolo pro</title>
         <!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
-		<META HTTP-EQUIV="Refresh" CONTENT="300;URL=cuistot.php"> 
+		<META HTTP-EQUIV="Refresh" CONTENT="300;URL=cuistot.php"/> 
     </head>
     <body>
 		<script type="text/javascript">
@@ -71,7 +71,7 @@
 						$trouve = 0;
 						// fichier xml
 						$dom_object = new DomDocument();
-						$dom_object->load("xml/nouriture.xml");
+						$dom_object->load("xml/nourriture.xml");
 						$xpath = new Domxpath($dom_object);
 						// crepe predefinie
 						$result = $xpath->query("//Crepe[Nom='$item']/Ingredients/Ingredient");
@@ -91,8 +91,22 @@
 							    echo "<div style='color:".$couleur."'>".$ing->nodeValue."</div>"; 
 							}
 						}
+						// galette perso
+						$res4 = queryDB("SELECT ingredient FROM ingredientsperso WHERE idperso='".$item."' AND idperso IN (SELECT idperso FROM perso WHERE sucre=0)", 'select');
+						$row4 = mysql_fetch_assoc($res4);
+						if ($row4 != 0) {
+							$trouve++;
+							echo "<em style='color:".$couleur."'>Galette perso</em><br/>";
+							$k=0;
+							while($row4){
+								$ingredient = $row4["ingredient"];
+								echo "<div style='color:".$couleur."'>".$ingredient."</div>";
+								$row4 = mysql_fetch_assoc($res4);
+								$k++;
+							}
+						}
 						// crepe perso
-						$res4 = queryDB("SELECT ingredient FROM crepesperso WHERE crepeperso='".$item."'", 'select');
+						$res4 = queryDB("SELECT ingredient FROM ingredientsperso WHERE idperso='".$item."' AND idperso IN (SELECT idperso FROM perso WHERE sucre=1)", 'select');
 						$row4 = mysql_fetch_assoc($res4);
 						if ($row4 != 0) {
 							$trouve++;
