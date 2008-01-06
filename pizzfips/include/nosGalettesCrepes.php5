@@ -7,10 +7,10 @@ Ingredients
 
 <?php
 		$xml = new DOMDocument;
-		$xml->load("xml/nouriture.xml");
+		$xml->load("xml/nourriture.xml");
 		
 		$xsl = new DOMDocument;
-		$xsl->load("xslt/AffNouriture.xsl");
+		$xsl->load("xslt/AffNourriture.xsl");
 		
 		// Configuration du transformateur
 		$proc = new XSLTProcessor;

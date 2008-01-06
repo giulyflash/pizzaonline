@@ -51,6 +51,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="Creperie/Galette" >
     	<xsl:variable name="nom" select="Nom"/>
         <xsl:variable name="prix" select="Prix"/>
+        <xsl:variable name="id" select="@id"/>
     	<tr>
             <td><xsl:copy-of select="$nom" /></td>
             <td>
@@ -60,7 +61,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <td>
              <form action="index.php5?page=ajouter_article" method="post">
                 <input type="hidden" name="type" value="galette" />
-				<input type="hidden" name="valeur" value="{$nom}" />
+				<input type="hidden" name="description" value="{$nom}" />
                 <input type="hidden" name="prix" value="{$prix}" />
 				<input type="text" name="quantite" value="1" />
                 <input type="image" src="interf/panier.gif" />
@@ -71,6 +72,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="Creperie/Crepe" >
     	<xsl:variable name="nom" select="Nom"/>
         <xsl:variable name="prix" select="Prix"/>
+        <xsl:variable name="id" select="@id"/>
     	<tr>
             <td><xsl:copy-of select="$nom" /></td>
             <td>
@@ -80,7 +82,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    			 <td>
              <form action="index.php5?page=ajouter_article" method="post">
                 <input type="hidden" name="type" value="crepe" />
-				<input type="hidden" name="valeur" value="{$nom}" />
+				<input type="hidden" name="description" value="{$nom}" />
+                <input type="hidden" name="id" value="{$id}" />
                 <input type="hidden" name="prix" value="{$prix}" />
 				<input type="text" name="quantite" value="1" />
                 <input type="image" src="interf/panier.gif" />
@@ -91,13 +94,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      <xsl:template match="Creperie/Boisson" >
      	<xsl:variable name="nom" select="Nom"/>
         <xsl:variable name="prix" select="Prix"/>
+        <xsl:variable name="id" select="@id"/>
     	<tr>
             <td><xsl:copy-of select="$nom" /></td>
             <td><xsl:copy-of select="$prix" /></td>
    			<td>
              <form action="index.php5?page=ajouter_article" method="post">
                 <input type="hidden" name="type" value="boisson" />
-				<input type="hidden" name="valeur" value="{$nom}" />
+				<input type="hidden" name="description" value="{$nom}" />
+                <input type="hidden" name="id" value="{$id}" />
                 <input type="hidden" name="prix" value="{$prix}" />
 				<input type="text" name="quantite" value="1" />
                 <input type="image" src="interf/panier.gif" />
@@ -108,13 +113,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      <xsl:template match="Creperie/Dessert" >
      	<xsl:variable name="nom" select="Nom"/>
         <xsl:variable name="prix" select="Prix"/>
+        <xsl:variable name="id" select="@id"/>
     	<tr>
             <td><xsl:copy-of select="$nom" /></td>
             <td><xsl:copy-of select="$prix" /></td>
    			<td>
              <form action="index.php5?page=ajouter_article" method="post">
                 <input type="hidden" name="type" value="dessert" />
-				<input type="hidden" name="valeur" value="{$nom}" />
+				<input type="hidden" name="description" value="{$nom}" />
+                <input type="hidden" name="id" value="{$id}" />
                 <input type="hidden" name="prix" value="{$prix}" />
 				<input type="text" name="quantite" value="1" />
                 <input type="image" src="interf/panier.gif" />
