@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Serveur: localhost
--- Généré le : Dim 06 Janvier 2008 à 21:52
+-- Généré le : Dim 06 Janvier 2008 à 14:55
 -- Version du serveur: 5.0.45
 -- Version de PHP: 5.2.5
 
@@ -67,22 +67,22 @@ INSERT INTO `commandes` (`id`, `client`, `date`, `heure`, `livre`) VALUES
 -- --------------------------------------------------------
 
 -- 
--- Structure de la table `ingredientsperso`
+-- Structure de la table `crepesperso`
 -- 
 
-DROP TABLE IF EXISTS `ingredientsperso`;
-CREATE TABLE IF NOT EXISTS `ingredientsperso` (
-  `idperso` varchar(255) NOT NULL,
+DROP TABLE IF EXISTS `crepesperso`;
+CREATE TABLE IF NOT EXISTS `crepesperso` (
+  `crepeperso` varchar(255) NOT NULL,
   `ingredient` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- 
--- Contenu de la table `ingredientsperso`
+-- Contenu de la table `crepesperso`
 -- 
 
-INSERT INTO `ingredientsperso` (`idperso`, `ingredient`) VALUES 
-('specialJen', 'Fromage'),
-('specialJen', 'Tomate');
+INSERT INTO `crepesperso` (`crepeperso`, `ingredient`) VALUES 
+('specialJen', 'fromage'),
+('specialJen', 'tomate');
 
 -- --------------------------------------------------------
 
@@ -103,29 +103,10 @@ CREATE TABLE IF NOT EXISTS `itemscommandes` (
 -- 
 
 INSERT INTO `itemscommandes` (`commande`, `item`, `quantite`, `pret`) VALUES 
-(1, 'specialJen', 3, 0),
+(1, 'specialJen', 3, 1),
 (1, 'Nutella', 1, 1),
 (0, 'Nutella', 2, 1),
 (1, 'Coca', 2, 0);
-
--- --------------------------------------------------------
-
--- 
--- Structure de la table `perso`
--- 
-
-DROP TABLE IF EXISTS `perso`;
-CREATE TABLE IF NOT EXISTS `perso` (
-  `idperso` varchar(255) NOT NULL,
-  `sucre` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- 
--- Contenu de la table `perso`
--- 
-
-INSERT INTO `perso` (`idperso`, `sucre`) VALUES 
-('specialJen', 0);
 
 -- --------------------------------------------------------
 
@@ -138,9 +119,7 @@ CREATE TABLE IF NOT EXISTS `stocks` (
   `ingredient` varchar(255) NOT NULL,
   `quantite` int(11) NOT NULL,
   `seuil` int(11) NOT NULL,
-  `crepable` tinyint(1) NOT NULL,
-  `prix` float NOT NULL,
-  `sucresale` int(11) NOT NULL,
+  `crepable` int(1) NOT NULL,
   PRIMARY KEY  (`ingredient`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -148,16 +127,3 @@ CREATE TABLE IF NOT EXISTS `stocks` (
 -- Contenu de la table `stocks`
 -- 
 
-INSERT INTO `stocks` (`ingredient`, `quantite`, `seuil`, `crepable`, `prix`, `sucresale`) VALUES 
-('Beurre', 22, 12, 1, 2, 2),
-('Biere', 22, 13, 0, 0, 0),
-('Brownie', 22, 1, 0, 0, 0),
-('Champignon', 323, 22, 1, 2, 1),
-('Coca', 45, 44, 0, 0, 0),
-('Emmental', 21, 12, 1, 1, 1),
-('Fromage', 32, 5, 1, 2, 1),
-('Jambon', 33, 2, 1, 1.5, 1),
-('Nutella', 33, 12, 1, 2, 0),
-('Sucre', 45, 3, 1, 2, 0),
-('Tarte au citron', 4, 2, 0, 0, 0),
-('Tomate', 43, 10, 1, 2, 1);
