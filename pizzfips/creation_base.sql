@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Serveur: localhost
--- Généré le : Ven 04 Janvier 2008 à 16:45
+-- Généré le : Dim 06 Janvier 2008 à 14:55
 -- Version du serveur: 5.0.45
 -- Version de PHP: 5.2.5
 
@@ -31,12 +31,14 @@ CREATE TABLE IF NOT EXISTS `client` (
   `ville` varchar(255) NOT NULL,
   `telephone` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 -- 
 -- Contenu de la table `client`
 -- 
 
+INSERT INTO `client` (`id`, `login`, `password`, `nom`, `prenom`, `adresse`, `codepostal`, `ville`, `telephone`) VALUES 
+(0, 'henry', 'henry', 'henry', 'jennifer', 'kefqebsc', 4567, 'xvjuk;', 345);
 
 -- --------------------------------------------------------
 
@@ -49,14 +51,18 @@ CREATE TABLE IF NOT EXISTS `commandes` (
   `id` int(11) NOT NULL auto_increment,
   `client` int(11) NOT NULL,
   `date` date NOT NULL,
+  `heure` time NOT NULL,
   `livre` tinyint(1) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 -- 
 -- Contenu de la table `commandes`
 -- 
 
+INSERT INTO `commandes` (`id`, `client`, `date`, `heure`, `livre`) VALUES 
+(0, 0, '2008-01-05', '10:00:00', 0),
+(1, 0, '2008-01-05', '09:09:09', 0);
 
 -- --------------------------------------------------------
 
@@ -74,6 +80,9 @@ CREATE TABLE IF NOT EXISTS `crepesperso` (
 -- Contenu de la table `crepesperso`
 -- 
 
+INSERT INTO `crepesperso` (`crepeperso`, `ingredient`) VALUES 
+('specialJen', 'fromage'),
+('specialJen', 'tomate');
 
 -- --------------------------------------------------------
 
@@ -93,6 +102,11 @@ CREATE TABLE IF NOT EXISTS `itemscommandes` (
 -- Contenu de la table `itemscommandes`
 -- 
 
+INSERT INTO `itemscommandes` (`commande`, `item`, `quantite`, `pret`) VALUES 
+(1, 'specialJen', 3, 1),
+(1, 'Nutella', 1, 1),
+(0, 'Nutella', 2, 1),
+(1, 'Coca', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -105,6 +119,7 @@ CREATE TABLE IF NOT EXISTS `stocks` (
   `ingredient` varchar(255) NOT NULL,
   `quantite` int(11) NOT NULL,
   `seuil` int(11) NOT NULL,
+  `crepable` tinyint(1) NOT NULL,
   PRIMARY KEY  (`ingredient`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
