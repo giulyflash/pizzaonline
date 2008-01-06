@@ -10,9 +10,13 @@
 		$_SESSION['panier']['article'][$_POST['type'].'-'.$_POST['id']]['prix']=$_POST['prix'];
 		$_SESSION['panier']['article'][$_POST['type'].'-'.$_POST['id']]['description']=$_POST['description'];
 		if(empty($_SESSION['panier']['article'][$_POST['type'].'-'.$_POST['id']]['quantite']))
+		{
 			$_SESSION['panier']['article'][$_POST['type'].'-'.$_POST['id']]['quantite']=$_POST['quantite'];
+		}
 		else
+		{
 			$_SESSION['panier']['article'][$_POST['type'].'-'.$_POST['id']]['quantite']+=$_POST['quantite'];
+		}
 		echo '<div class="title">Ajout effectue</div>Votre selection a ete ajoutee au panier.';
 	}
 ?>

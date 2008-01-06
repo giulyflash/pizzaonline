@@ -5,10 +5,14 @@
 	}
 	else
 	{
+		$_SESSION['panier']['perso'][$_SESSION['id_perso']]['prix']=$_POST['prix'];
+		$_SESSION['panier']['perso'][$_SESSION['id_perso']]['quantite']=$_POST['quantite'];
 		foreach ($_POST['ingredient'] as $ingredient)
 		{
-			echo $ingredient;
+			$_SESSION['panier']['perso'][$_SESSION['id_perso']]['ingredient'][]=$ingredient;
 		}
-		echo $_POST['prix'];
 	}
+	$_SESSION['id_perso']++;
+	
+	echo '<div class="title">Ajout effectue</div>Votre crepe personnalisee a ete ajoutee au panier.';
 ?>

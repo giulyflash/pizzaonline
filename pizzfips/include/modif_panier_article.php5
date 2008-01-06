@@ -26,6 +26,6 @@
 			unset($_SESSION['panier']['article'][$_POST['id']]);
 			break;
 		}
-		echo '<div class="title">Modification effectuee</div>Votre selection a ete modifie sur votre panier.';
+		echo '<div class="title">Modification effectuee</div>Votre selection a ete modifiee sur votre panier.';
 	}
 ?>

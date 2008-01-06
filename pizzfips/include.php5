@@ -1,6 +1,12 @@
 <?php
 	session_start();
-
+	
+	// gestion des id pour les crepes personnalisées
+	if(!isset($_SESSION['id_perso']))
+	{
+		$_SESSION['id_perso']=0;
+	}
+	
 	// gestion des pseudo frame
 	if(empty($_GET['page']))
 	{
@@ -99,6 +105,11 @@
 			case "modifier_article":
 			$page="include/modif_panier_article.php5";
 			$title="Modification d'un article sur votre panier";
+			break;
+			
+			case "modifier_perso":
+			$page="include/modif_panier_perso.php5";
+			$title="Modification d'une crepe personnalisee sur votre panier";
 			break;
 		}
 	}
