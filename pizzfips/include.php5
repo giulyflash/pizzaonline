@@ -57,6 +57,11 @@
 			$title="Vos galettes et crêpes personalisées";
 			break;
 			
+			case "recherche":
+			$page="include/recherche.php5";
+			$title="Recherchez vos crêpes et galettes préférées";
+			break;
+			
 			case "panier":
 			$page="include/panier.php5";
 			$title="Votre panier";

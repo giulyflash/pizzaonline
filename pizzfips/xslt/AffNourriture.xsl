@@ -3,13 +3,13 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:output method="xml" encoding="UTF-8"/>
+<xsl:output method="html" encoding="UTF-8"/>
 
 	<xsl:template match="/">
     <div class="title">Nos Galettes</div>
     <table>
       <tr>
-        <th>Nom</th>
+        <th>Nom </th>
         <th>Composition</th>
         <th>Prix</th>
         <th>Ajouter</th>
@@ -46,12 +46,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </tr>
 		<xsl:apply-templates select="Creperie/Dessert"/>
     </table>
-	</xsl:template>
+
+	</xsl:template> 
 	
 	<xsl:template match="Creperie/Galette" >
     	<xsl:variable name="nom" select="Nom"/>
         <xsl:variable name="prix" select="Prix"/>
         <xsl:variable name="id" select="@id"/>
+        
     	<tr>
             <td><xsl:copy-of select="$nom" /></td>
             <td>
@@ -68,7 +70,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <input type="image" src="interf/panier.gif" />
             </form>
             </td>
-        </tr>	
+        </tr>
+
 	</xsl:template>
     <xsl:template match="Creperie/Crepe" >
     	<xsl:variable name="nom" select="Nom"/>
@@ -133,5 +136,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="Ingredients/Ingredient">
     	<xsl:value-of select="."/>&#160;
     </xsl:template>
+    
 
 </xsl:stylesheet>

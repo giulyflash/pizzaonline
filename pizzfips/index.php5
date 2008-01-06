@@ -50,6 +50,7 @@
                         <li><a href="index.php5?page=menu">Nos menus</a></li>
                         <li><a href="index.php5?page=noscrepe">Nos Galettes<br />/Crepes</a></li>
                         <li><a href="index.php5?page=voscrepe">Vos Galettes<br />/Crepes</a></li>
+                        <li><a href="index.php5?page=recherche">Rechercher</a></li>
                         <li><a href="index.php5?page=panier">Votre panier</a></li>
                     </ul>
                 </div>
