@@ -152,6 +152,13 @@ body
 	padding:1px;
 }
 
+input[disabled]
+{
+	border:0px;
+	background-color:#CCCCCC;
+	color:#666666;
+}
+
 #footer
 {
 	text-align:center;
