@@ -1,8 +1,7 @@
 <?php
 	if(empty($_GET['type']) || $_GET['type']=="tous")
 	{
-		session_unset();
-		session_destroy();
+		unset($_SESSION['panier']);
 	}
 	else
 	{
