@@ -25,7 +25,7 @@
 		echo "<table>";
 		echo "<form action='index.php5?page=ajouter_menu' method='post'> ";
 		echo "<input type='hidden' name='nommenu' value='".$nommenu->nodeValue. "' />";
-		echo "<tr><td> Menu ".$nommenu->nodeValue. "</td></tr>";
+		echo "<tr><th> Menu ".$nommenu->nodeValue. " ".$prixmenu->nodeValue. " euros</th></tr>";
 		echo"<tr><td>";
 		if (is_object($Galettemenu)) {
 			echo "<input type='hidden' name='nbgalette' value='".$Galettemenu->nodeValue. "' />";
@@ -42,7 +42,7 @@
 		if (is_object($Crepemenu)) {
 			echo "<input type='hidden' name='nbcrepe' value='".$Crepemenu->nodeValue. "' />";
 			for($i=0;$i<$Crepemenu->nodeValue;$i++){
-				echo " Crepe ".($i+1).": <select name='crepe".($i+1)."' id='crepe".($i+1)."' size=1 >"; $crepe=selectItem($listeCrepes,1); 
+				echo " Crêpe ".($i+1).": <select name='crepe".($i+1)."' id='crepe".($i+1)."' size=1 >"; $crepe=selectItem($listeCrepes,1); 
 				echo "</select>";
 				$id_crepe = $crepe->getAttribute("id");
 				$idmenu .= $id_crepe;
@@ -62,15 +62,15 @@
 			}
 		}
 		echo"</td></tr>";
-		echo "<tr><td> Prix ".$prixmenu->nodeValue. "</td></tr>";
+		//echo "<tr><td> Prix ".$prixmenu->nodeValue. "</td></tr>";
 		echo "<input type='hidden' name='prix' value='".$prixmenu->nodeValue. "' />";
 		echo "<input type='hidden' name='send' value='1' />";
 		echo "<input type='hidden' name='idmenu' value='".$idmenu. "' />";
-		echo "<tr><td> Quantite <input type='text' name='quantite' id='quantite' value='1' /> Commander <input type='image' src='interf/panier.gif' border='0' name='submit' alt='Go'></td></tr>";
+		echo "<tr><td> Quantité <input type='text' name='quantite' id='quantite' value='1' /> Commander <input type='image' src='interf/panier.gif' border='0' name='submit' alt='Go'></td></tr>";
 		echo"</form></table>";
 	}
 
-	
+	/*
 	$xsl = new DOMDocument;
 	$xsl->load("xslt/AffMenu.xsl");
 	
@@ -79,5 +79,5 @@
 	$proc->importStyleSheet($xsl); // attachement des règles xsl
 	
 	$res=$proc->transformToXML($xml);
-	print "$res";
+	print "$res";*/
 ?>

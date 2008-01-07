@@ -2,23 +2,26 @@
 <?php
 	if(empty($_SESSION['panier']['article']))
 	{
-		echo 'Vous n\'avez selectionne aucun article';
+		echo 'Vous n\'avez pas selectionné d\'article';
 	}
 	else
 	{
 		echo '<table>
 			<tr>
 				<th>
-					type
+					Type
 				</th>
 				<th>
-					description
+					Description
 				</th>
 				<th>
-					prix
+					Prix
 				</th>
 				<th>
-					quantite
+					Quantité
+				</th>
+				<th>
+					Modification
 				</th>
 			</tr>';
 		foreach($_SESSION['panier']['article'] as $key=>$value)
@@ -65,16 +68,16 @@
 		echo 'Vous n\'avez selectionne aucun article';
 	}
 	else{
-		foreach($_SESSION['panier']['menu'] as $value)
+		foreach($_SESSION['panier']['menu'] as $key=>$value)
 		{
 			echo '<table>';
 			echo '<tr>
-				<td>
-					'.$value['nommenu'].'
-				</td>
-				<td>
-					'.$value['prix'].'
-				</td>
+				<th>
+					Menu '.$value['nommenu'].'
+				</th>
+				<th>
+					Prix '.$value['prix'].'
+				</th>
 			</tr>';
 			if(empty($value['nbgalette'])) $nbgalette = 0;
 			else $nbgalette = intval($value['nbgalette']);
@@ -83,7 +86,7 @@
 				
 				echo '<tr>
 					<td>
-						Galette
+						Galette n°'.($i+1).'
 					</td>
 					<td>
 						'.$value['galette'.($i+1)].'
@@ -91,13 +94,13 @@
 				</tr>';
 			}
 			if(empty($value['nbcrepe'])) $nbcrepe = 0;
-			else $nbcrepe = intval($value['nbgalette']);
+			else $nbcrepe = intval($value['nbcrepe']);
 			for($i=0;$i<$nbcrepe;$i++)
 			{
 				
 				echo '<tr>
 					<td>
-						Crepe
+						Crepe n°'.($i+1).'
 					</td>
 					<td>
 						'.$value['crepe'.($i+1)].'
@@ -111,13 +114,36 @@
 				
 				echo '<tr>
 					<td>
-						Boisson
+						Boisson n°'.($i+1).'
 					</td>
 					<td>
 						'.$value['boisson'.($i+1)].'
 					</td>
 				</tr>';
 			}
+			echo '
+				<tr>
+				<td>
+					Quantité : '.$value['quantite'].'
+				</td>
+				<td>
+					<form action="index.php5?page=modifier_menu" method="post">
+						<input type="hidden" name="id" value="'.$key.'" />
+						<input type="hidden" name="type" value="reduire" />
+						<input type="image" class="modif" src="interf/panier_reduire.png" />
+					</form>
+					<form action="index.php5?page=modifier_menu" method="post">
+						<input type="hidden" name="id" value="'.$key.'" />
+						<input type="hidden" name="type" value="augmenter" />
+						<input type="image" class="modif" src="interf/panier_augmenter.png" />
+					</form>
+					<form action="index.php5?page=modifier_menu" method="post">
+						<input type="hidden" name="id" value="'.$key.'" />
+						<input type="hidden" name="type" value="supprimer" />
+						<input type="image" class="modif" src="interf/panier_supprimer.png" />
+					</form>
+				</td>
+				</tr>';
 			echo '</table>';
 		}
 		
@@ -134,13 +160,16 @@
 		echo '<table>
 			<tr>
 				<th>
+					Type
+				</th>
+				<th>
 					Description
 				</th>
 				<th>
 					Prix
 				</th>
 				<th>
-					Quantite
+					Quantité
 				</th>
 				<th>
 					Modification
@@ -149,6 +178,9 @@
 		foreach($_SESSION['panier']['perso'] as $key=>$value)
 		{
 			echo '<tr>
+				<td>
+					'.$value['type'].'
+				</td>
 				<td>
 					';
 			foreach($_SESSION['panier']['perso'][$key]['ingredient'] as $ingredient)
@@ -184,3 +216,9 @@
 		echo '</table>';
 	}
 ?>
+
+<a href="index.php5?page=valider_commande">Commander</a>
+<a href="index.php5?page=vider_panier">Vider</a>
+<a href="index.php5?page=vider_panier&type=article">Vider les articles</a>
+<a href="index.php5?page=vider_panier&type=menu">Vider les menus</a>
+<a href="index.php5?page=vider_panier&type=perso">Vider les personnalisées</a>
