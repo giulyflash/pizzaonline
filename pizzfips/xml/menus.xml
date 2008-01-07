@@ -16,4 +16,10 @@
 		<Boisson>2</Boisson>
 		<Prix>15,00</Prix>
 	</Menu>
+	<Menu>
+		<Nom>Dessert</Nom>
+		<Crepe>2</Crepe>
+		<Boisson>2</Boisson>
+		<Prix>15,00</Prix>
+	</Menu>
 </Menus>

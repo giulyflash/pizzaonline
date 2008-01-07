@@ -4,7 +4,7 @@
         <title>Crepaiolo pro</title>
         <!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
 		<META HTTP-EQUIV="Refresh" CONTENT="300;URL=cuistot.php"/> 
-    </head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
     <body>
 		<script type="text/javascript">
 			function pret(commande, item, pret){
@@ -14,7 +14,7 @@
 				window.location.href = 'cuistot/itempret.php?commande='+commande+'&item='+item+'&pret='+p;
 			}
 			function livrer(commande){
-				if (confirm('La commande est prête à être livrée ?')) {
+				if (confirm('La commande est prÃªte Ã  Ãªtre livrÃ©e ?')) {
 					window.location.href = 'cuistot/commandeprete.php?id='+commande;
 				}
 			}
@@ -48,12 +48,12 @@
 				// date et heure de la commande
 				$date = $row["date"];
 				$heure = $row["heure"];
-				echo "Commande passée le ".datefr($date)." à $heure<br/>";
+				echo "Commande passÃ©e le ".datefr($date)." Ã  $heure<br/>";
 				// items
 				$res3 = queryDB("SELECT item, quantite, pret FROM itemscommandes WHERE commande=".$idCommande, 'select');
 				$row3 = mysql_fetch_assoc($res3);
 				if ($row3 == 0) {
-					echo "!!! Aucun item commandé !!!<br/>";
+					echo "!!! Aucun item commandÃ© !!!<br/>";
 				}
 				else {
 					$j=0;
@@ -77,7 +77,7 @@
 						$result = $xpath->query("//Crepe[Nom='$item']/Ingredients/Ingredient");
 						if ($result->length != 0) {
 							$trouve++;
-							echo "<em style='color:".$couleur."'>Crêpe standard</em><br/>";
+							echo "<em style='color:".$couleur."'>CrÃªpe standard</em><br/>";
 							foreach ($result as $ing) {
 							    echo "<div style='color:".$couleur."'>".$ing->nodeValue."</div>";   
 							}
@@ -110,7 +110,7 @@
 						$row4 = mysql_fetch_assoc($res4);
 						if ($row4 != 0) {
 							$trouve++;
-							echo "<em style='color:".$couleur."'>Crêpe perso</em><br/>";
+							echo "<em style='color:".$couleur."'>CrÃªpe perso</em><br/>";
 							$k=0;
 							while($row4){
 								$ingredient = $row4["ingredient"];
@@ -131,7 +131,7 @@
 							$trouve++;
 							echo "<em style='color:".$couleur."'>Dessert</em><br/>";
 						}
-						// si pas trouvé
+						// si pas trouvÃ©
 						if ($trouve==0) {
 							echo "<div style='color:red'>!!! Item introuvable !!!<br/></div>";
 						}
@@ -146,7 +146,7 @@
 				$row = mysql_fetch_assoc($res);
 				$i++;
 			}
-			echo "<br/><br/><font size=1>Dernière mise à jour le ".date("d-m-Y")." à ".date("H:i:s")."</font>";
+			echo "<br/><br/><font size=1>DerniÃ¨re mise Ã  jour le ".date("d-m-Y")." Ã  ".date("H:i:s")."</font>";
 			function datefr($date) { 
 				$split = split("-",$date); 
 				$annee = $split[0]; 

@@ -30,25 +30,26 @@
 		
 	}
 	
-	function queryDB($sql, $type='select', $prefixe='./outils/') 
+	function queryDB($sql, $type='select', $prefixe='') 
 	{
+		include('param.php5');
 		//recherche des informations de configuration
 		$result = -8;
-		$dom = new DomDocument();
-		$fileName = $prefixe."configuration.xml";
-		if(!file_exists($fileName) || !$dom->Load($fileName))
-		{
-			return -3; // fichier de base inéxistant
-		}
-		else
-		{
-			$dom->validateOnParse = true;
-			$config = $dom->getElementsByTagName('connexionBD')->item(0);
+		//$dom = new DomDocument();
+		//$fileName = $prefixe."configuration.xml";
+		//if(!file_exists($fileName) || !$dom->Load($fileName))
+//		{
+//			return -3; // fichier de base inéxistant
+//		}
+//		else
+//		{
+			//$dom->validateOnParse = true;
+			//$config = $dom->getElementsByTagName('connexionBD')->item(0);
 			
-			$host = $config->getAttribute("host");
-			$user = $config->getAttribute("login");
-			$password = $config->getAttribute("password");
-			$bdName = $config->getAttribute("bdName");
+			$host = $db_host;//$config->getAttribute("host");
+			$user = $db_login;//$config->getAttribute("login");
+			$password = $db_pass;//$config->getAttribute("password");
+			$bdName = $db_name;//$config->getAttribute("bdName");
 			
 		   if (!$db = @mysql_connect($host,$user,$password))
 		   {
@@ -90,7 +91,7 @@
 		      case 'select' : $result = @mysql_query($sql,$db); break;
 		   }
 		   @mysql_close($db);
-		}
+		//}
 		return $result;   
 	}
 	

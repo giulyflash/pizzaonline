@@ -7,8 +7,7 @@
 	
 	// Configuration du transformateur
 	$proc = new XSLTProcessor;
-	$proc->importStyleSheet($xsl); // attachement des règles xsl
-	
+	$proc->importStyleSheet($xsl); 	
 	$res=$proc->transformToXML($xml);
 	print "$res";
 ?>

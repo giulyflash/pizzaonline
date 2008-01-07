@@ -5,6 +5,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:output method="html" encoding="UTF-8"/>
 
+
 	<xsl:template match="/">
     <div class="title">Nos Galettes</div>
     <table>
@@ -136,6 +137,4 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="Ingredients/Ingredient">
     	<xsl:value-of select="."/>&#160;
     </xsl:template>
-    
-
 </xsl:stylesheet>

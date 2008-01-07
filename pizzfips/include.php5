@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-	// gestion des id pour les crepes personnalisées
+	// gestion des id pour les crepes personnalisÃ©es
 	if(!isset($_SESSION['id_perso']))
 	{
 		$_SESSION['id_perso']=0;
@@ -37,6 +37,7 @@
 		
 		switch($_GET['page'])
 		{
+			
 			case "accueil":
 			$page="include/accueil.php5";
 			$title="Accueil";
@@ -49,17 +50,17 @@
 			
 			case "noscrepe":
 			$page="include/nosGalettesCrepes.php5";
-			$title="Nos galettes et nos crêpes";
+			$title="Nos galettes et nos crÃªpes";
 			break;
 			
 			case "voscrepe":
 			$page="include/vosGalettesCrepes.php5";
-			$title="Vos galettes et crêpes personalisées";
+			$title="Vos galettes et crÃªpes personalisÃ©es";
 			break;
 			
 			case "recherche":
 			$page="include/recherche.php5";
-			$title="Recherchez vos crêpes et galettes préférées";
+			$title="Recherchez vos crÃªpes et galettes prÃ©fÃ©rÃ©es";
 			break;
 			
 			case "panier":
@@ -102,6 +103,11 @@
 			$title="Ajout d'un article a votre panier";
 			break;
 			
+			case "ajouter_menu":
+			$page="include/ajouter_panier_menu.php5";
+			$title="Ajout d'un article a votre panier";
+			break;
+			
 			case "ajouter_perso":
 			$page="include/ajouter_panier_perso.php5";
 			$title="Ajout d'une crepe personnalise a votre panier";
@@ -109,6 +115,11 @@
 			
 			case "modifier_article":
 			$page="include/modif_panier_article.php5";
+			$title="Modification d'un article sur votre panier";
+			break;
+			
+			case "modifier_menu":
+			$page="include/modif_panier_menu.php5";
 			$title="Modification d'un article sur votre panier";
 			break;
 			

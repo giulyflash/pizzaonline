@@ -3,14 +3,14 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Serveur: localhost
--- Généré le : Dim 06 Janvier 2008 à 14:55
+-- GÃ©nÃ©rÃ© le : Lun 07 Janvier 2008 Ã  14:36
 -- Version du serveur: 5.0.45
 -- Version de PHP: 5.2.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 -- 
--- Base de données: `crepes`
+-- Base de donnÃ©es: `crepes`
 -- 
 
 -- --------------------------------------------------------
@@ -19,8 +19,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Structure de la table `client`
 -- 
 
-DROP TABLE IF EXISTS `client`;
-CREATE TABLE IF NOT EXISTS `client` (
+CREATE TABLE `client` (
   `id` int(11) NOT NULL auto_increment,
   `login` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -46,8 +45,7 @@ INSERT INTO `client` (`id`, `login`, `password`, `nom`, `prenom`, `adresse`, `co
 -- Structure de la table `commandes`
 -- 
 
-DROP TABLE IF EXISTS `commandes`;
-CREATE TABLE IF NOT EXISTS `commandes` (
+CREATE TABLE `commandes` (
   `id` int(11) NOT NULL auto_increment,
   `client` int(11) NOT NULL,
   `date` date NOT NULL,
@@ -67,22 +65,21 @@ INSERT INTO `commandes` (`id`, `client`, `date`, `heure`, `livre`) VALUES
 -- --------------------------------------------------------
 
 -- 
--- Structure de la table `crepesperso`
+-- Structure de la table `ingredientsperso`
 -- 
 
-DROP TABLE IF EXISTS `crepesperso`;
-CREATE TABLE IF NOT EXISTS `crepesperso` (
-  `crepeperso` varchar(255) NOT NULL,
+CREATE TABLE `ingredientsperso` (
+  `idperso` varchar(255) NOT NULL,
   `ingredient` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- 
--- Contenu de la table `crepesperso`
+-- Contenu de la table `ingredientsperso`
 -- 
 
-INSERT INTO `crepesperso` (`crepeperso`, `ingredient`) VALUES 
-('specialJen', 'fromage'),
-('specialJen', 'tomate');
+INSERT INTO `ingredientsperso` (`idperso`, `ingredient`) VALUES 
+('specialJen', 'Fromage'),
+('specialJen', 'Tomate');
 
 -- --------------------------------------------------------
 
@@ -90,8 +87,7 @@ INSERT INTO `crepesperso` (`crepeperso`, `ingredient`) VALUES
 -- Structure de la table `itemscommandes`
 -- 
 
-DROP TABLE IF EXISTS `itemscommandes`;
-CREATE TABLE IF NOT EXISTS `itemscommandes` (
+CREATE TABLE `itemscommandes` (
   `commande` int(11) NOT NULL,
   `item` varchar(255) NOT NULL,
   `quantite` int(11) NOT NULL,
@@ -103,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `itemscommandes` (
 -- 
 
 INSERT INTO `itemscommandes` (`commande`, `item`, `quantite`, `pret`) VALUES 
-(1, 'specialJen', 3, 1),
+(1, 'specialJen', 3, 0),
 (1, 'Nutella', 1, 1),
 (0, 'Nutella', 2, 1),
 (1, 'Coca', 2, 0);
@@ -111,15 +107,34 @@ INSERT INTO `itemscommandes` (`commande`, `item`, `quantite`, `pret`) VALUES
 -- --------------------------------------------------------
 
 -- 
+-- Structure de la table `perso`
+-- 
+
+CREATE TABLE `perso` (
+  `idperso` varchar(255) NOT NULL,
+  `sucre` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Contenu de la table `perso`
+-- 
+
+INSERT INTO `perso` (`idperso`, `sucre`) VALUES 
+('specialJen', 0);
+
+-- --------------------------------------------------------
+
+-- 
 -- Structure de la table `stocks`
 -- 
 
-DROP TABLE IF EXISTS `stocks`;
-CREATE TABLE IF NOT EXISTS `stocks` (
+CREATE TABLE `stocks` (
   `ingredient` varchar(255) NOT NULL,
   `quantite` int(11) NOT NULL,
   `seuil` int(11) NOT NULL,
   `crepable` int(1) NOT NULL,
+  `prix` float NOT NULL,
+  `sucresale` int(11) NOT NULL,
   PRIMARY KEY  (`ingredient`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -127,3 +142,16 @@ CREATE TABLE IF NOT EXISTS `stocks` (
 -- Contenu de la table `stocks`
 -- 
 
+INSERT INTO `stocks` (`ingredient`, `quantite`, `seuil`, `crepable`, `prix`, `sucresale`) VALUES 
+('Beurre', 22, 12, 1, 2, 2),
+('Biere', 22, 13, 0, 0, 0),
+('Brownie', 22, 1, 0, 0, 0),
+('Champignon', 323, 22, 1, 2, 1),
+('Coca', 45, 44, 0, 0, 0),
+('Emmental', 21, 12, 1, 1, 1),
+('Fromage', 32, 5, 1, 2, 1),
+('Jambon', 33, 2, 1, 1.5, 1),
+('Nutella', 33, 12, 1, 2, 0),
+('Sucre', 45, 3, 1, 2, 0),
+('Tarte au citron', 4, 2, 0, 0, 0),
+('Tomate', 43, 10, 1, 2, 1);

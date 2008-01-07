@@ -28,7 +28,7 @@
 					}
 					else
 					{
-						echo '<div class="title">Erreur</div>Erreur de connexion a la base de données.';
+						echo '<div class="title">Erreur</div>Erreur de connexion a la base de donnÃ©es.';
 					}
 					
 				}
@@ -45,7 +45,7 @@
 			}
 			else
 			{
-				echo '<div class="title">Erreur</div>Erreur de connexion a la base de données.';
+				echo '<div class="title">Erreur</div>Erreur de connexion a la base de donnÃ©es.';
 			}
 			db_close();
 		}

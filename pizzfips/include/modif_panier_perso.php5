@@ -1,7 +1,7 @@
 <?php
 	if(!isset($_POST['id']) || empty($_POST['type']))
 	{
-		echo '<div class="title">Erreur</div>Erreur dans la selection de la crepe personnalisee.';
+		echo '<div class="title">Erreur</div>Erreur dans la selection de la crêpe personnalisée.';
 	}
 	else
 	{
@@ -11,7 +11,7 @@
 			$_SESSION['panier']['perso'][$_POST['id']]['quantite']++;
 			break;
 			
-			case "reduire":
+			case "réduire":
 			if($_SESSION['panier']['perso'][$_POST['id']]['quantite']>1)
 			{
 				$_SESSION['panier']['perso'][$_POST['id']]['quantite']--;
@@ -26,6 +26,6 @@
 			unset($_SESSION['panier']['perso'][$_POST['id']]);
 			break;
 		}
-		echo '<div class="title">Modification effectuee</div>Votre selection a ete modifiee sur votre panier.';
+		echo '<div class="title">Modification effectuée</div>Votre sélection a été modifiée sur votre panier.';
 	}
 ?>

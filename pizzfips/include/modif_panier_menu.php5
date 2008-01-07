@@ -8,22 +8,22 @@
 		switch($_POST['type'])
 		{
 			case "augmenter":
-			$_SESSION['panier']['article'][$_POST['id']]['quantite']++;
+			$_SESSION['panier']['menu'][$_POST['id']]['quantite']++;
 			break;
 			
 			case "réduire":
-			if($_SESSION['panier']['article'][$_POST['id']]['quantite']>1)
+			if($_SESSION['panier']['menu'][$_POST['id']]['quantite']>1)
 			{
-				$_SESSION['panier']['article'][$_POST['id']]['quantite']--;
+				$_SESSION['panier']['menu'][$_POST['id']]['quantite']--;
 			}
 			else
 			{
-				unset($_SESSION['panier']['article'][$_POST['id']]);
+				unset($_SESSION['panier']['menu'][$_POST['id']]);
 			}
 			break;
 			
 			case "supprimer":
-			unset($_SESSION['panier']['article'][$_POST['id']]);
+			unset($_SESSION['panier']['menu'][$_POST['id']]);
 			break;
 		}
 		echo '<div class="title">Modification effectuée</div>Votre selection a été modifiée sur votre panier.';

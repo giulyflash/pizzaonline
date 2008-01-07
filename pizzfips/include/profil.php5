@@ -19,7 +19,7 @@ if($connecte)
     </div>
 	<label for="nom">Votre nom</label>
 	<input type="text" name="nom" id="nom" value="'.$res->nom.'" />
-	<label for="prenom">Votre prenom</label>
+	<label for="prenom">Votre prénom</label>
 	<input type="text" name="prenom" id="prenom" value="'.$res->prenom.'" />
 	<label for="adresse">Votre adresse</label>
 	<input type="text" name="adresse" id="adresse" value="'.$res->adresse.'" />
@@ -27,7 +27,7 @@ if($connecte)
 	<input type="text" name="ville" id="ville" value="'.$res->ville.'" />
 	<label for="code_postal">Votre code postal</label>
 	<input type="text" name="code_postal" id="code_postal" value="'.$res->codepostal.'" />
-	<label for="telephone">Votre telephone</label>
+	<label for="telephone">Votre téléphone</label>
 	<input type="text" name="telephone" id="telephone" value="'.$res->telephone.'" />
 	<input type="submit" value="Modifier" name="submit" id="submit" />
 </form>';
@@ -35,5 +35,5 @@ if($connecte)
 else
 {
 	echo '<div class="title">Erreur</div>
-Vous devez etre connecte pour modifier votre profil';
+Vous devez être connecté pour modifier votre profil';
 }
