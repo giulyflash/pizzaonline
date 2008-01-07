@@ -1,8 +1,8 @@
 <?php
 	if(empty($_POST['type']) || empty($_POST['ingredient']) || empty($_POST['quantite']) || empty($_POST['prix']))
 	{
-		echo '<div class="title">Erreur</div>Erreur dans l\'ajout de votre crêpe personnalisée.';
-		echo '<br /><a href="index.php5?page=voscrepes">Retour à l\'écran de sélection des crêpes personnalisée</a>';
+		echo '<div class="title">Erreur</div>Erreur dans l\'ajout de votre crÃªpe personnalisÃ©e.';
+		echo '<br /><a href="index.php5?page=voscrepes">Retour Ã  l\'Ã©cran de sÃ©lection des crÃªpes personnalisÃ©e</a>';
 		echo '<br /><a href="index.php5?page=panier">Voir le panier</a>';
 	}
 	else
@@ -27,9 +27,8 @@
 		{
 			$_SESSION['panier']['perso'][$id_perso]['ingredient'][]=$ingredient;
 		}
+		echo '<div class="title">Ajout effectuÃ©</div>Votre crÃªpe personnalisÃ©e a Ã©tÃ© ajoutÃ©e au panier.';
+		echo '<br /><a href="index.php5?page=voscrepes">Retour Ã  l\'Ã©cran de sÃ©lection des crÃªpes personnalisÃ©e</a>';
+		echo '<br /><a href="index.php5?page=panier">Voir le panier</a>';
 	}
-	
-	echo '<div class="title">Ajout effectué</div>Votre crêpe personnalisée a été ajoutée au panier.';
-	echo '<br /><a href="index.php5?page=voscrepes">Retour à l\'écran de sélection des crêpes personnalisée</a>';
-	echo '<br /><a href="index.php5?page=panier">Voir le panier</a>';
 ?>

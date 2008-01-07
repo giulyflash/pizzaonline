@@ -9,7 +9,6 @@
 	{
 		db_connect();
 		
-		
 		// Création de la commande
 		db_query('INSERT INTO commandes(client,date,heure,livre) VALUES(\''.$_SESSION['user_id'].'\', CURRENT_DATE(), CURRENT_TIME(), 0)');
 		$id_commande=db_last_id();
@@ -24,8 +23,7 @@
 		foreach($_SESSION['panier']['perso'] as $key=>$value)
 		{
 			$sucree=($value['type']=="crepe");
-			$id="titi";
-			db_query('INSERT INTO perso(idperso,sucre) VALUES(\''.$id.'\', '.(($sucree)?"1":"0").')');
+			db_query('INSERT INTO perso(sucre) VALUES('.(($sucree)?"1":"0").')');
 			foreach($_SESSION['panier']['perso'][$key]['ingredient'] as $ingredient)
 			{
 				db_query('INSERT INTO ingredientsperso(idperso,ingredient) VALUES(\''.$id.'\', \''.$ingredient.'\')');

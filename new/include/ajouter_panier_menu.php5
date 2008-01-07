@@ -1,5 +1,5 @@
 <?php
-if(empty($_POST['send']) )
+if(empty($_POST['send']))
 {
 	echo '<div class="title">Erreur</div>Erreur dans la sélection de l\'article.';
 	echo '<br /><a href="index.php5?page=menu">Retour à la liste des menus</a>';
