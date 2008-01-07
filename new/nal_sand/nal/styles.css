@@ -1,0 +1,298 @@
+
+/* Propriete des cadres de l'index */
+/* ------------------------------------------------------------------------------------------------------ */
+
+body.header{
+/*background-color:#CDE3EF;*/
+margin-top:30px;
+margin-right:60px;
+margin-left:0px;
+width: 820px;
+background-image:url("images/thebluehead2.jpg");  background-repeat: repeat-x; background-position: inherit;
+}
+
+
+body.right{
+width: 140px;
+margin-right:280px;
+}
+
+
+body{
+margin-right:80px;
+margin-left:100px;
+width: 800px;
+/*background-image:url("images/thebluefond.jpg"); background-repeat: repeat; background-position: inherit;*/
+
+}
+
+body a:link, body a:visited{
+color:#000000;
+text-decoration:underline;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* propriétés des différentes divisions */
+
+
+/*------------------------------------------------------------------------------------------*/
+/* comportement de la liste dans le bloc menu */
+
+#menu {
+width:820px;
+}
+
+#menu li {
+list-style-type: none;
+display:inline;
+}
+
+#menu a:link, #menu a:visited {
+font-weight:bold;
+text-decoration:none;
+
+}
+
+#menu a:hover, #menu a:active {
+text-decoration:underline;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* propriétés du sousmenu */
+
+#onglet {
+    float:left;
+    width:100%;
+    background:#FFFFFF url("images\bg6.bmp")  repeat-x bottom;
+    font-size:93%;
+    line-height:normal;
+	
+ }
+
+#onglet ul {
+    margin:0;
+    padding:10px 10px 0;
+    list-style:none;
+ }
+#onglet li {
+    float:left;
+    background:url("images\norm_right.gif") no-repeat right top;
+    margin:0;
+    padding:0 0 0 ;
+ }
+#onglet a, #onglet strong, #onglet span{
+    display:block;
+    background:url("images\norm_left.gif") no-repeat left top;
+    padding:5px 15px 4px 6px;
+	color:#696969;
+text-align:center;
+
+ }
+ #onglet #current {
+    background-image:url("images\norm_right_on.gif");
+ }
+ #onglet #current a {
+    background-image:url("images\norm_left_on.gif");
+    padding-bottom:5px;
+ }
+/*---------------------------------------------------------------------------------*/
+/* propriétés du menu horizontal */
+
+#menu_horizontal {
+	text-align:center;
+	width:800px;
+}
+
+#menu_horizontal li {
+	margin-right:40px;
+	list-style-type: none;
+	display:inline;
+}
+
+#menu_horizontal a:link, #menu_horizontal a:visited {
+	color:#000000;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#menu_horizontal a:hover, #menu_horizontal a:active {
+	text-decoration:underline overline;
+}
+
+/*---------------------------------------------------------------------------------*/
+/* propriétés des liens (de base et déjà visités) contenus dans le bloc chemin_fer */
+
+#chemin_fer a:link, #chemin_fer a:visited {
+	color:#FF9933;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#chemin_fer {
+}
+
+#chemin_fer a:hover, #chemin_fer a:active {
+	text-decoration:underline overline;
+}
+
+/*---------------------------------------------------------------------------------*/
+/* propriétés du menu vertical */
+
+#menu_vertical {
+float:left;
+width:30%;
+height:300px;
+}
+
+#menu_vertical li {
+margin-right:20px;
+margin-left:0px
+}
+
+#menu_vertical a:link, #menu_vertical a:visited {
+color:#000000;
+font-size:16px;
+text-decoration:none;
+}
+
+#menu_vertical a:hover, #menu_vertical a:active {
+text-decoration:underline;
+}
+
+/*---------------------------------------------------------------------------------*/
+/* propriétés des tables */
+
+table caption,
+table th,
+table td {
+    padding: 0.1em 0.5em 0.1em 0.5em;
+    margin: 0;
+    margin: 0.1em;
+    vertical-align: bottom;
+    font-size:	14px;
+    border:	0; 
+    cellpadding:	5;
+
+}
+
+/* odd table rows 1,3,5,7,... */
+table td.odd, tr.odd th,
+table tr.odd {
+    background-image:   none;
+    background-color:   #CCFFCC; /*vert*/
+    font-size:14px;
+}
+
+/* even table rows 2,4,6,8,... */
+table td.even, tr.even th,
+table tr.even {
+    background-image:   none;
+    background-color:   #EEEEEC;
+    font-size:14px;
+}
+
+/* even table rows 2,4,6,8,... */
+table td.clair, tr.clair th,
+table tr.clair {
+    background-image:   none;
+    background-color:   #E6E6FA;
+    font-size:14px;
+}
+
+
+/* marked tbale rows */
+table tr.marked th,
+table tr.marked {
+    background-color:   #FFCC99;
+}
+
+/* head tbale rows */
+table td.head, tr.head th,
+table tr.head {
+    background-color:   #DEEFDD;
+    text-align:         left;
+    font-weight:bold;
+    font-size:16px;
+}
+
+table tr.headv2 {
+    background-color:   #DEEFDD;
+    text-align:         center;
+    font-weight:bold;
+    font-size:16px;
+}
+
+table tr.small {
+    text-align:         center;
+    font-size:11px;
+}
+
+
+table tr.headodd {
+    background-image:   none;
+    background-color:   #CCFFCC;/*vert*/
+    font-size:14px;
+    text-align:         left;
+    font-weight:bold;
+}
+
+/* hovered table rows */
+table tr.odd:hover,
+table tr.even:hover,
+table tr.odd:hover th,
+table tr.even:hover th,
+table tr.hover th,
+table tr.hover {
+    background-color:   #FFCC99;
+}
+
+table td.important{
+	font-weight:bold;
+	text-align: right;
+	color: #FF6347;
+}
+
+table tr.total, td.total{
+	font-weight:bold;
+	text-align: center;
+	color: #FF6347;
+	/*background-color: #FFCC99;*/
+	background-color: #FFE4C4;
+}
+
+
+table td.important2{
+	font-weight:bold;
+	text-align: right;
+	color: #4169E1;
+}
+
+table td.num{
+	text-align: center;
+}
+
+table td.texte{
+	text-align: justify;
+	background-color:   #EEEEEC;
+}
+
+table td.texte2{
+	text-align: justify;
+	background-color:   #EEEEEC;
+	font-size:14px;
+}
+
+table td.titre{
+	font-size:20px;
+	font-weight:bold;
+	background-color:   #CCFFCC;
+}
+
+
+table td.soustitre{
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
