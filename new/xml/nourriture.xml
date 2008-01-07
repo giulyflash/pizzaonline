@@ -48,4 +48,4 @@
 		<Nom>Tarte au citron</Nom>
 		<Prix>6,00</Prix>
 	</Dessert>
-</Creperie>
+<Crepe id="3"><Nom>Beurre Nutella Sucre </Nom><Prix>2</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Nutella</Ingredient><Ingredient>Sucre</Ingredient></Ingredients></Crepe><Crepe id="4"><Nom>Beurre Nutella Sucre </Nom><Prix>6</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Nutella</Ingredient><Ingredient>Sucre</Ingredient></Ingredients></Crepe></Creperie>
