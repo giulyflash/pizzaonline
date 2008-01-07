@@ -1,13 +1,9 @@
-<script language="javascript">
-	choix = "rien";
-</script>
-
 <?php
  	require('outils/outilsBD.php');
  	echo ("<div class=\"title\">Recherche</div>");
 	echo ("Ingredients<form name = 'formRecherche' action='index.php5?page=recherche' method='post'> <select name='choix'>");
 	
-	$res1 = queryDB("SELECT ingredient FROM stocks ", 'select');
+	$res1 = queryDB("SELECT ingredient FROM stocks WHERE crepable = 1", 'select');
 	$row1 = mysql_fetch_assoc($res1);
 	if ($row1 == 0) {
 		echo "Aucune";
@@ -19,7 +15,7 @@
 	echo ("</select><input type='submit' value='rechercher' /></form>");
 	if(!empty($_POST['choix']))
 	{
-		echo "<div class='title'>Résultats sur l'ingredient:".$_POST['choix']." </div>";
+		echo "<div class='title'>Résultats sur l'ingredient : ".$_POST['choix']." </div>";
 		$xml = new DOMDocument;
 		$xml->load("xml/nourriture.xml");
 		
@@ -28,6 +24,7 @@
 		
 		// Configuration du transformateur
 		$proc = new XSLTProcessor;
+		$proc->setParameter('','choix',$_POST['choix']);
 		$proc->importStyleSheet($xsl); // attachement des règles xsl
 		
 		$res=$proc->transformToXML($xml);

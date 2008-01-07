@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
-<xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-<xsl:output method="html" encoding="UTF-8"/>
-
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:param name="choix" />
+<xsl:output method="html" encoding="utf-8"/>
+	
 	<xsl:template match="/">
     <table>
       <tr>
-        <th>Nom </th>
+        <th>Nom</th>
         <th>Composition</th>
         <th>Prix</th>
         <th>Ajouter</th>
       </tr>
-	   <xsl:apply-templates select="Creperie/Galette"/>
-       <xsl:apply-templates select="Creperie/Crepe"/>
+	   <xsl:apply-templates select="Creperie/Galette[Ingredients/Ingredient = $choix]"/>
+       <xsl:apply-templates select="Creperie/Crepe[Ingredients/Ingredient = $choix]"/>
     </table>
     </xsl:template>
     
