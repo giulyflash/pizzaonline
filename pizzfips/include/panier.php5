@@ -9,19 +9,16 @@
 		echo '<table>
 			<tr>
 				<th>
-					Type
+					type
 				</th>
 				<th>
-					Description
+					description
 				</th>
 				<th>
-					Prix
+					prix
 				</th>
 				<th>
-					Quantite
-				</th>
-				<th>
-					Modification
+					quantite
 				</th>
 			</tr>';
 		foreach($_SESSION['panier']['article'] as $key=>$value)
@@ -65,63 +62,65 @@
 <?php
 	if(empty($_SESSION['panier']['menu']))
 	{
-		echo 'Vous n\'avez selectionne aucun menu';
+		echo 'Vous n\'avez selectionne aucun article';
 	}
-	else
-	{
-		echo '<table>
-			<tr>
-				<th>
-					Type
-				</th>
-				<th>
-					Description
-				</th>
-				<th>
-					Prix
-				</th>
-				<th>
-					Quantite
-				</th>
-				<th>
-					Modification
-				</th>
-			</tr>';
-		foreach($_SESSION['panier']['article'] as $key=>$value)
+	else{
+		foreach($_SESSION['panier']['menu'] as $value)
 		{
+			echo '<table>';
 			echo '<tr>
 				<td>
-					'.$value['type'].'
-				</td>
-				<td>
-					'.$value['description'].'
+					'.$value['nommenu'].'
 				</td>
 				<td>
 					'.$value['prix'].'
 				</td>
-				<td>
-					'.$value['quantite'].'
-				</td>
-				<td>
-					<form action="index.php5?page=modifier_article" method="post">
-						<input type="hidden" name="id" value="'.$key.'" />
-						<input type="hidden" name="type" value="reduire" />
-						<input type="image" class="modif" src="interf/panier_reduire.png" />
-					</form>
-					<form action="index.php5?page=modifier_article" method="post">
-						<input type="hidden" name="id" value="'.$key.'" />
-						<input type="hidden" name="type" value="augmenter" />
-						<input type="image" class="modif" src="interf/panier_augmenter.png" />
-					</form>
-					<form action="index.php5?page=modifier_article" method="post">
-						<input type="hidden" name="id" value="'.$key.'" />
-						<input type="hidden" name="type" value="supprimer" />
-						<input type="image" class="modif" src="interf/panier_supprimer.png" />
-					</form>
-				</td>
 			</tr>';
+			if(empty($value['nbgalette'])) $nbgalette = 0;
+			else $nbgalette = intval($value['nbgalette']);
+			for($i=0;$i<$nbgalette;$i++)
+			{
+				
+				echo '<tr>
+					<td>
+						Galette
+					</td>
+					<td>
+						'.$value['galette'.($i+1)].'
+					</td>
+				</tr>';
+			}
+			if(empty($value['nbcrepe'])) $nbcrepe = 0;
+			else $nbcrepe = intval($value['nbgalette']);
+			for($i=0;$i<$nbcrepe;$i++)
+			{
+				
+				echo '<tr>
+					<td>
+						Crepe
+					</td>
+					<td>
+						'.$value['crepe'.($i+1)].'
+					</td>
+				</tr>';
+			}
+			if(empty($value['nbboisson'])) $nbboisson = 0;
+			else $nbboisson = intval($value['nbboisson']);
+			for($i=0;$i<$nbboisson;$i++)
+			{
+				
+				echo '<tr>
+					<td>
+						Boisson
+					</td>
+					<td>
+						'.$value['boisson'.($i+1)].'
+					</td>
+				</tr>';
+			}
+			echo '</table>';
 		}
-		echo '</table>';
+		
 	}
 ?>
 <div class="title">Vos crepes persos</div>
