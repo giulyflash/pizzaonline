@@ -30,53 +30,81 @@
 		document.getElementById('custom_crepe_prix').value=prix_crepe;
 	}
 </script>
- <?php
- 	require('outils/outilsBD.php');
- 	echo ("<div class=\"title\">Votre galette</div>");
-	echo ("<form action=\"index.php5?page=ajouter_perso\" method=\"post\">");
-	echo ("<input type=\"hidden\" name = \"type\" value = \"galette\"> <table><tr><th>Composition</th><th>Prix</th><th>Ajouter</th></tr>");
+	<div class="title">Votre galette</div>
+	<form action="index.php5?page=ajouter_perso" method="post">
+        <input type="hidden" name = "type" value = "galette"> 
+        <table>
+            <tr>
+                <th>Composition</th><th>Prix</th><th>Ajouter</th>
+            </tr>
+            <?php
+				require('outils/outilsBD.php');
+				$res1 = queryDB("SELECT ingredient, prix, sucresale FROM stocks WHERE crepable = 1 and (sucresale = 1 or sucresale = 2) ", 'select');
+				$row1 = mysql_fetch_assoc($res1);
+				if ($row1 == 0) {
+					echo "Aucune :)";
+				}
+				while($row1){
+					echo "<tr>";
+					echo "<td>".$row1["ingredient"]."<td\>";
+					echo "<td>".$row1["prix"]."<td\>";
+					echo "<td><input type=\"checkbox\" name=\"ingredient[]\" value=\"".$row1["ingredient"]."\""; 
+					echo "onclick=\"maj_prix_galette(this,".$row1["prix"].");\" /></td>";
+					echo "</tr>";
+					
+					$row1 = mysql_fetch_assoc($res1);
+					}
+            ?>
+            <tr>
+                <td colspan="3">Prix : 
+                    <input type="text"id="custom_galette_prix_affiche" value="0" disabled="disabled" />
+                    <input type="hidden" id="custom_galette_prix" name="prix" value="0" />
+                 </td>
+            </tr>
+            <tr>
+                <td colspan="3">Quantité : 
+                    <input type="text" value="1" name="quantite" id="custom_galette_quantite" />
+                    <input type="image" src="interf/panier.gif" />
+                </td>
+             </tr>
+          </table>
+    </form>
 	
-	$res1 = queryDB("SELECT ingredient, prix, sucresale FROM stocks WHERE crepable = 1 and (sucresale = 1 or sucresale = 2) ", 'select');
-	$row1 = mysql_fetch_assoc($res1);
-	if ($row1 == 0) {
-		echo "Aucune :)";
-	}
-	while($row1){
-		echo "<tr>";
-		echo "<td>".$row1["ingredient"]."<td\>";
-		echo "<td>".$row1["prix"]."<td\>";
-		echo "<td><input type=\"checkbox\" name=\"ingredient[]\" value=\"".$row1["ingredient"]."\""; 
-		echo "onclick=\"maj_prix_galette(this,".$row1["prix"].");\" /></td>";
-		echo "</tr>";
-		
-		$row1 = mysql_fetch_assoc($res1);
-		}
-	echo ("<tr><td colspan=\"3\">Prix : <input type=\"text\"id=\"custom_galette_prix_affiche\" value=\"0\" disabled=\"disabled\" />");
-	echo ("<input type=\"hidden\" id=\"custom_galette_prix\" name=\"prix\" value=\"0\" /></td></tr>");
-	echo ("<tr><td colspan=\"3\">Quantité : <input type=\"text\" value=\"1\" name=\"quantite\" id=\"custom_galette_quantite\" />");
-	echo ("<input type=\"image\" src=\"interf/panier.gif\" /></td></tr></table></form>");
+	<div class="title">Votre crêpe</div>
+	<form action="index.php5?page=ajouter_perso" method="post">
+		<input type="hidden" name = "type" value = "crepe">
+        <table>
+        	<tr>
+            	<th>Composition</th><th>Prix</th><th>Ajouter</th>
+            </tr>
 	
-	echo ("<div class=\"title\">Votre crêpe</div>");
-	echo ("<form action=\"index.php5?page=ajouter_perso\" method=\"post\">");
-	echo ("<input type=\"hidden\" name = \"type\" value = \"crepe\"><table><tr><th>Composition</th><th>Prix</th><th>Ajouter</th></tr>");
-	
-
-	$res2 = queryDB("SELECT ingredient, prix, sucresale FROM stocks WHERE crepable = 1 and (sucresale = 0 or sucresale = 2) ", 'select');
-	$row2 = mysql_fetch_assoc($res2);
-	if ($row2 == 0) {
-		echo "Aucune :)";
-	}
-	while($row2){
-		echo "<tr>";
-		echo "<td>".$row2["ingredient"]."<td\>";
-		echo "<td>".$row2["prix"]."<td\>";
-		echo "<td><input type=\"checkbox\" name=\"ingredient[]\" value=\"".$row2["ingredient"]."\""; 
-		echo "onclick=\"maj_prix_crepe(this,".$row2["prix"].");\" /></td>";
-		echo "</tr>";
-		$row2 = mysql_fetch_assoc($res2);
-		}
-	echo ("<tr><td colspan=\"3\">Prix : <input type=\"text\"id=\"custom_crepe_prix_affiche\" value=\"0\" disabled=\"disabled\" />");
-	echo ("<input type=\"hidden\" id=\"custom_crepe_prix\" name=\"prix\" value=\"0\" /></td></tr>");
-	echo ("<tr><td colspan=\"3\">Quantite : <input type=\"text\" value=\"1\" name=\"quantite\" id=\"custom_crepe_quantite\" />");
-	echo ("<input type=\"image\" src=\"interf/panier.gif\" /></td></tr></table></form>");
-?>
+			<?php
+				$res2 = queryDB("SELECT ingredient, prix, sucresale FROM stocks WHERE crepable = 1 and (sucresale = 0 or sucresale = 2) ", 'select');
+				$row2 = mysql_fetch_assoc($res2);
+				if ($row2 == 0) {
+					echo "Aucune :)";
+				}
+				while($row2){
+					echo "<tr>";
+					echo "<td>".$row2["ingredient"]."<td\>";
+					echo "<td>".$row2["prix"]."<td\>";
+					echo "<td><input type=\"checkbox\" name=\"ingredient[]\" value=\"".$row2["ingredient"]."\""; 
+					echo "onclick=\"maj_prix_crepe(this,".$row2["prix"].");\" /></td>";
+					echo "</tr>";
+					$row2 = mysql_fetch_assoc($res2);
+					}
+			?>
+			<tr>
+            	<td colspan="3">Prix : 
+                    <input type="text"id="custom_crepe_prix_affiche" value="0" disabled="disabled" />
+                    <input type="hidden" id="custom_crepe_prix" name="prix" value="0" />
+                </td>
+            </tr>
+			<tr>
+            	<td colspan="3">Quantite : 
+                	<input type="text" value="1" name="quantite" id="custom_crepe_quantite" />
+					<input type="image" src="interf/panier.gif" />
+                </td>
+             </tr>
+         </table>
+     </form>

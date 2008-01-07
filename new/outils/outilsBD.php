@@ -32,7 +32,7 @@
 	
 	function queryDB($sql, $type='select', $prefixe='') 
 	{
-		include('param.php5');
+		include($prefixe.'param.php5');
 		//recherche des informations de configuration
 		$result = -8;
 		//$dom = new DomDocument();

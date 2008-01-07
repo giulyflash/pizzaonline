@@ -7,7 +7,7 @@
 	require('../outils/outilsBD.php');
 	$url = "UPDATE itemscommandes SET pret=".$pret." WHERE commande=".$commande." AND item='".$item."'";
 	echo($url);
-	$res = queryDB($url, 'update', '../outils/');
+	$res = queryDB($url, 'update', '../');
 	echo $res;
 	echo "<script> location = '../cuistot.php'; </script>";
 ?>
