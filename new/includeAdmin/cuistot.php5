@@ -16,7 +16,7 @@
 	while($row){
 		$idCommande = $row["id"];
 		echo "<table><tr><td>";
-		echo "<h2>Commande ".$i." <a href=\"commandeprete.php5?id=".$idCommande."\" onclick=\"if(!livrer()) return false;\"><img src=\"interf/livrer.png\"></a></h2>";
+		echo "<h2>Commande ".$i." <a href=\"includeAdmin/commandeprete.php5?id=".$idCommande."\" onclick=\"if(!livrer()) return false;\"><img src=\"interf/livrer.png\"></a></h2>";
 		echo "<div class=\"info\">";
 		// client
 		$client = $row["client"];
@@ -86,7 +86,7 @@
 				$result = $xpath->query("//Crepe[Nom='".$item."']/Ingredients/Ingredient");
 				if ($result->length != 0) {
 					$trouve=true;
-					echo " (Crêpe standard) <a href=\"admin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a><ul>";
+					echo " (Crêpe standard) <a href=\"includeAdmin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a><ul>";
 					foreach ($result as $ing)
 					{
 						echo "<li>".$ing->nodeValue."</li>";   
@@ -99,7 +99,7 @@
 				$result = $xpath->query("//Galette[Nom='".$item."']/Ingredients/Ingredient");
 				if ($result->length != 0) {
 					$trouve=true;
-					echo " (Galette standard) <a href=\"admin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a><ul>";
+					echo " (Galette standard) <a href=\"includeAdmin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a><ul>";
 					foreach ($result as $ing)
 					{
 						echo "<li>".$ing->nodeValue."</li>"; 
@@ -116,7 +116,7 @@
 					$res5 = queryDB("SELECT sucre FROM perso WHERE idperso='".$item."'", 'select');
 					$row5 = mysql_fetch_assoc($res5);
 					$sucre = $row5["sucre"];
-					echo " (".(($sucre)?"Crêpe":"Galette").") <a href=\"admin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a><ul>";
+					echo " (".(($sucre)?"Crêpe":"Galette").") <a href=\"includeAdmin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a><ul>";
 					$k=0;
 					while($row4){
 						$ingredient = $row4["ingredient"];
@@ -128,7 +128,7 @@
 				}
 				break;
 			case "Dessert":
-				echo $debutTitre.$quantite." x ".$item." (Dessert) <a href=\"admin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a>";
+				echo $debutTitre.$quantite." x ".$item." (Dessert) <a href=\"includeAdmin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a>";
 				$result = $xpath->query("//Dessert[Nom='".$item."']");
 				if ($result->length != 0) {
 					$trouve=true;
@@ -136,7 +136,7 @@
 				echo "</li>";
 				break;
 			case "Boisson":
-				echo $debutTitre.$quantite." x ".$item." (Boisson) <a href=\"admin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a>";
+				echo $debutTitre.$quantite." x ".$item." (Boisson) <a href=\"includeAdmin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a>";
 				$result = $xpath->query("//Boisson[Nom='".$item."']");
 				if ($result->length != 0) {
 					$trouve=true;
