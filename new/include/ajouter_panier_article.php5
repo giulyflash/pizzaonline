@@ -1,8 +1,8 @@
 <?php
 	if(empty($_POST['type']) || empty($_POST['description']) || empty($_POST['id']) || empty($_POST['prix']) || empty($_POST['quantite']))
 	{
-		echo '<div class="title">Erreur</div>Erreur dans la sélection de l\'article.';
-		echo '<br /><a href="index.php5?page=noscrepes">Retour à la liste des crêpes</a>';
+		echo '<div class="title">Erreur</div>Erreur dans la sÃ©lection de l\'article.';
+		echo '<br /><a href="index.php5?page=noscrepes">Retour Ã  la liste des crÃªpes</a>';
 		echo '<br /><a href="index.php5?page=panier">Voir le panier</a>';
 	}
 	else
@@ -19,8 +19,8 @@
 		{
 			$_SESSION['panier']['article'][$_POST['type'].'-'.$_POST['id']]['quantite']+=$_POST['quantite'];
 		}
-		echo '<div class="title">Ajout effectué</div>Votre sélection a été ajoutée au panier.';
-		echo '<br /><a href="index.php5?page=noscrepes">Retour à la liste des crêpes</a>';
+		echo '<div class="title">Ajout effectuÃ©</div>Votre sÃ©lection a Ã©tÃ© ajoutÃ©e au panier.';
+		echo '<br /><a href="index.php5?page=noscrepes">Retour Ã  la liste des crÃªpes</a>';
 		echo '<br /><a href="index.php5?page=panier">Voir le panier</a>';
 	}
 ?>

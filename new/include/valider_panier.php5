@@ -220,7 +220,7 @@
 					{
 						db_query('INSERT INTO ingredientsperso(idperso,ingredient) VALUES(\''.$id_perso.'\', \''.$ingredient.'\')');
 					}
-					db_query('INSERT INTO itemscommandes(commande,item,quantite,pret,type) VALUES(\''.$id_commande.'\', \''.$id.'\', \''.$value['quantite'].'\', 0, \'Perso\')');
+					db_query('INSERT INTO itemscommandes(commande,item,quantite,pret,type) VALUES(\''.$id_commande.'\', \''.$id_perso.'\', \''.$value['quantite'].'\', 0, \'Perso\')');
 				}
 			}
 			

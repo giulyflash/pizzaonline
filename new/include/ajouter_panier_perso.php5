@@ -12,19 +12,19 @@
 		{
 			$id_perso.=$ingredient;
 		}
-		$_SESSION['panier']['perso'][$id_perso]['type']=$_POST['type'];
-		$_SESSION['panier']['perso'][$id_perso]['prix']=$_POST['prix'];
 		if(empty($_SESSION['panier']['perso'][$id_perso]['quantite']))
 		{
+			$_SESSION['panier']['perso'][$id_perso]['type']=$_POST['type'];
+			$_SESSION['panier']['perso'][$id_perso]['prix']=$_POST['prix'];
 			$_SESSION['panier']['perso'][$id_perso]['quantite']=$_POST['quantite'];
+			foreach ($_POST['ingredient'] as $ingredient)
+			{
+				$_SESSION['panier']['perso'][$id_perso]['ingredient'][]=$ingredient;
+			}
 		}
 		else
 		{
 			$_SESSION['panier']['perso'][$id_perso]['quantite']+=$_POST['quantite'];
-		}
-		foreach ($_POST['ingredient'] as $ingredient)
-		{
-			$_SESSION['panier']['perso'][$id_perso]['ingredient'][]=$ingredient;
 		}
 		echo '<div class="title">Ajout effectué</div>Votre crêpe personnalisée a été ajoutée au panier.';
 		echo '<br /><a href="index.php5?page=voscrepes">Retour à l\'écran de sélection des crêpes personnalisée</a>';
