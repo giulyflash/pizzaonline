@@ -33,6 +33,10 @@
 		{
 			session_unset();
 			session_destroy();
+		}else if($_GET['page']=="historique")
+		{
+			$page="include/historique.php5";
+			$title="Historique";
 		}
 		
 		switch($_GET['page'])
@@ -56,6 +60,11 @@
 			case "voscrepes":
 			$page="include/vosGalettesCrepes.php5";
 			$title="Vos galettes et crêpes personalisées";
+			break;
+			
+			case "commandes":
+			$page="include/commandes.php5";
+			$title="Recherchez l'historique de vos commandes";
 			break;
 			
 			case "recherche":
