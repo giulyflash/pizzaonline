@@ -46,8 +46,8 @@
 				}
 				while($row1){
 					echo "<tr>";
-					echo "<td>".$row1["ingredient"]."<td\>";
-					echo "<td>".$row1["prix"]."<td\>";
+					echo "<td>".$row1["ingredient"]."</td>";
+					echo "<td>".$row1["prix"]."</td>";
 					echo "<td><input type=\"checkbox\" name=\"ingredient[]\" value=\"".$row1["ingredient"]."\""; 
 					echo "onclick=\"maj_prix_galette(this,".$row1["prix"].");\" /></td>";
 					echo "</tr>";
