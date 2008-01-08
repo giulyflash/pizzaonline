@@ -36,4 +36,4 @@
 		<Nom>Tarte au citron</Nom>
 		<Prix>6,00</Prix>
 	</Dessert>
-<Crepe id="2"><Nom>tutu</Nom><Prix>123</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Nutella</Ingredient><Ingredient>Sucre</Ingredient></Ingredients></Crepe><Galette id="2"><Nom>pol</Nom><Prix>5</Prix><Ingredients><Ingredient>Emmental</Ingredient><Ingredient>Tomate</Ingredient></Ingredients></Galette></Creperie>
+<Crepe id="2"><Nom>tutu</Nom><Prix>123</Prix><Ingredients><Ingredient>Beurre</Ingredient></Ingredients></Crepe><Galette id="2"><Nom>pol3</Nom><Prix>14</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Champignon</Ingredient></Ingredients></Galette></Creperie>

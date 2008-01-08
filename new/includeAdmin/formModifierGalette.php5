@@ -24,22 +24,22 @@
             if ($row1 == 0) {
                 echo "Erreur aucun ingredients présent en base";
             }
-            while($row2){
-				$ingre = $row2["ingredient"];
+            while($row1){
+				$ingre = $row1["ingredient"];
                 echo "<tr>";
-                echo "<td>".$row2["ingredient"]."<td\>";
+                echo "<td>".$row1["ingredient"]."<td\>";
 				$result = $xpath->query("//Galette [Nom='$nom']/Ingredients[Ingredient = '$ingre']");
 				if($result->length != 0) 
 				{
-					echo "<td><input type=\"checkbox\" checked=\"checked\" name=\"ingredient[]\" value=\"".$row2["ingredient"]."\"/></td>";
+					echo "<td><input type=\"checkbox\" checked=\"checked\" name=\"ingredient[]\" value=\"".$row1["ingredient"]."\"/></td>";
 				}
 				else 
 				{
-					echo "<td><input type=\"checkbox\" name=\"ingredient[]\" value=\"".$row2["ingredient"]."\"/></td>";
+					echo "<td><input type=\"checkbox\" name=\"ingredient[]\" value=\"".$row1["ingredient"]."\"/></td>";
 				}
             
                 echo "</tr>";
-                $row2 = mysql_fetch_assoc($res2);
+                $row1 = mysql_fetch_assoc($res1);
                 }
 			echo "</table>";
      		echo "<label> Nom </label> <input type='text' name='nom' value='$nom'/>";
