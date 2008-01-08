@@ -13,24 +13,25 @@
     </head>
     <body>
     	<div id="main_content">
-            <div id="header">            </div>
+            <div id="headerAdmin">            </div>
             <div id="nav">
             	<div id="nav_header">
                 	Menu                </div>
                 <div id="nav_content">
                     <ul>
-                        <li><a href="admin/indexAdmin.php5?page=commandes">Accueil</a></li>
-                        <li><a href="admin/indexAdmin.php5?page=ajouterCrepes">Ajouter Galettes<br />/Crepes</a></li>
-                        <li><a href="admin/indexAdmin.php5?page=supprimerItem">Supprimer Galettes<br />/Crepes</a></li>
+                        <li><a href="indexAdmin.php5?page=commandes">Commandes</a></li>
+                        <li><a href="indexAdmin.php5?page=ajouterCrepes">Ajouter Galettes<br />/Crepes</a></li>
+                        <li><a href="indexAdmin.php5?page=supprimerCrepes">Supprimer Galettes<br />/Crepes</a></li>
                     </ul>
                 </div>
-            	<div id="nav_footer">                </div>
+            	<div id="nav_footer"></div>
             </div>
             <div id="content">
             	<?php include($page); ?>
             </div>
             <div id="footer">
-                "La NAL, c'est bon, mangez-en!"©            </div>
+                "La NAL, c'est bon, mangez-en!"©            
+            </div>
         </div>
 </body>
 </html>

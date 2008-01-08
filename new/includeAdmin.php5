@@ -10,17 +10,16 @@
 	// gestion des pseudo frame
 	if(empty($_GET['page']))
 	{
-		$page="cuistot.php";
+		$page="includeAdmin/cuistot.php5";
 		$title="Accueil";
 	}
 	else
 	{
 		switch($_GET['page'])
 		{
-			
 			case "commandes":
-			$page="cuistot.php";
-			$title="Accueil";
+			$page="includeAdmin/cuistot.php5";
+			$title="Ajouter une crêpes ou une gâlette";
 			break;
 			
 			case "ajouterCrepes":
