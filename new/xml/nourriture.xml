@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creperie>
     <Titre>CREPERIE</Titre>
-	<Galette id="1">
-		<Nom>Jambon</Nom>
-		<Prix>4,00</Prix>
-		<Ingredients>
-			<Ingredient>Jambon</Ingredient>
-		</Ingredients>
-	</Galette>
+	
 	<Galette id="2">
 		<Nom>Galette Maison</Nom>
 		<Prix>6,00</Prix>
@@ -42,4 +36,4 @@
 		<Nom>Tarte au citron</Nom>
 		<Prix>6,00</Prix>
 	</Dessert>
-<Galette id="3"><Nom>Beurre Champignon Emmental Fromage </Nom><Prix>12</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Champignon</Ingredient><Ingredient>Emmental</Ingredient><Ingredient>Fromage</Ingredient></Ingredients></Galette><Galette id="4"><Nom>toto</Nom><Prix>14</Prix><Ingredients><Ingredient>Beurre</Ingredient></Ingredients></Galette><Crepe id="2"><Nom>tata</Nom><Prix>12</Prix><Ingredients><Ingredient>Nutella</Ingredient></Ingredients></Crepe></Creperie>
+<Crepe id="2"><Nom>tutu</Nom><Prix>123</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Nutella</Ingredient><Ingredient>Sucre</Ingredient></Ingredients></Crepe><Galette id="2"><Nom>pol</Nom><Prix>5</Prix><Ingredients><Ingredient>Emmental</Ingredient><Ingredient>Tomate</Ingredient></Ingredients></Galette></Creperie>
