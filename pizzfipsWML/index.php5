@@ -13,59 +13,56 @@
     	<div id="main_content">
             <div id="header">
             </div>
-            <p id="content">
+            <div id="nav">
+            	<div id="login_header">
+                	Login
+                </div>
+                <div id="login_content">
+                	<?php
+						if($connecte)
+						{
+							echo 'Vous etes connectes en tant que : <a href="index.php5?page=profil">'.$login_name.'</a><br />
+							<a href="index.php5?page=historique">Historique</a><br/>
+							<a href="index.php5?page=deconnexion">Se deconnecter</a>';
+						}
+						else
+						{
+							echo '<form action="index.php5?page=connexion" method="post">
+						<label for="login_name">Login</label>
+						<input type="text" name="login_name" id="login_name" />
+						<label for="login_name">Mot de passe</label>
+						<input type="password" name="login_pass" id="login_pass" />
+						<input type="submit" id="login_submit" value="S\'identifier" />
+					</form>
+                    <a href="index.php5?page=inscription">S\'inscrire</a>';
+						}
+					?>
+                </div>
+            	<div id="login_footer">
+                </div>
+            	<div id="nav_header">
+                	Menu
+                </div>
+                <div id="nav_content">
+                    <ul>
+                        <li><a href="index.php5?page=accueil">Accueil</a></li>
+                        <li><a href="index.php5?page=menu">Nos menus</a></li>
+                        <li><a href="index.php5?page=noscrepes">Nos Galettes<br />/Crepes</a></li>
+                        <li><a href="index.php5?page=voscrepes">Vos Galettes<br />/Crepes</a></li>
+                        <li><a href="index.php5?page=recherche">Rechercher</a></li>
+                        <li><a href="index.php5?page=panier">Votre panier</a></li>
+                    </ul>
+                </div>
+            	<div id="nav_footer">
+                </div>
+            </div>
+            <div id="content">
             	<?php include($page); ?>
-            </p>
-            <p id="nav">
-				<p id="login">
-	            	<b id="login_header">
-	                	------------------<br/>
-	                	Login<br/>
-	                </b>
-	                <div id="login_content">
-	                	<?php
-							if($connecte)
-							{
-								echo 'Vous etes connectes en tant que :'.$login_name.
-								'<a href="index.php5?page=deconnexion">Se deconnecter</a>';
-							}
-							else
-							{
-								echo '<form action="index.php5?page=connexion" method="post">
-								<label for="login_name">Login</label>
-								<input type="text" name="login_name" id="login_name" /><br/>
-								<label for="login_name">Mot de passe</label>
-								<input type="password" name="login_pass" id="login_pass" /><br/>
-								<input type="submit" id="login_submit" value="S\'identifier" /><br/>
-								</form>
-			                    <a href="index.php5?page=inscription">S\'inscrire</a>';
-							}
-						?>
-						<br/>
-	                </div>
-	            	<b id="login_footer">
-	                	------------------<br/>
-	                </b>
-				</p>
-				<p id="menu">
-	            	<b id="nav_header">
-	                	------------------<br/>
-	                	Menu<br/>
-	                </b>
-	                <div id="nav_content">
-						<a href="index.php5?page=accueil">Accueil</a><br/>
-						<a href="index.php5?page=menu">Nos menus</a><br/>
-						<a href="index.php5?page=crepe">Nos crepes</a><br/>
-						<a href="index.php5?page=panier">Votre panier</a><br/>
-	                </div>
-	            	<b id="nav_footer">
-	                	------------------<br/>
-	                </b>
-				</p>
-            </p>
-            <p id="footer">
+            </div>
+            <div id="footer">
                 "La NAL, c'est bon, mangez-en!"©
-            </p>
+            </div>
         </div>
     </card>
 </wml>
+

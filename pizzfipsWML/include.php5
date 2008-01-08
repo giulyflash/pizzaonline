@@ -1,6 +1,12 @@
 <?php
 	session_start();
-
+	
+	// gestion des id pour les crepes personnalisées
+	if(!isset($_SESSION['id_perso']))
+	{
+		$_SESSION['id_perso']=0;
+	}
+	
 	// gestion des pseudo frame
 	if(empty($_GET['page']))
 	{
@@ -27,10 +33,15 @@
 		{
 			session_unset();
 			session_destroy();
+		}else if($_GET['page']=="historique")
+		{
+			$page="include/historique.php5";
+			$title="Historique";
 		}
 		
 		switch($_GET['page'])
 		{
+			
 			case "accueil":
 			$page="include/accueil.php5";
 			$title="Accueil";
@@ -41,9 +52,24 @@
 			$title="Nos menus";
 			break;
 			
-			case "crepe":
-			$page="include/crepe2.php5";
-			$title="Nos pizzas";
+			case "noscrepes":
+			$page="include/nosGalettesCrepes.php5";
+			$title="Nos galettes et nos crêpes";
+			break;
+			
+			case "voscrepes":
+			$page="include/vosGalettesCrepes.php5";
+			$title="Vos galettes et crêpes personalisées";
+			break;
+			
+			case "commandes":
+			$page="include/commandes.php5";
+			$title="Recherchez l'historique de vos commandes";
+			break;
+			
+			case "recherche":
+			$page="include/recherche.php5";
+			$title="Recherchez vos crêpes et galettes préférées";
 			break;
 			
 			case "panier":
@@ -61,14 +87,64 @@
 			$title="Fin de l'inscription";
 			break;
 			
-			case "connexion";
+			case "connexion":
 			$page="include/connexion.php5";
 			$title="Connexion";
 			break;
 			
-			case "deconnexion";
+			case "deconnexion":
 			$page="include/deconnexion.php5";
-			$title="Deconnexion";
+			$title="Déconnexion";
+			break;
+			
+			case "profil":
+			$page="include/profil.php5";
+			$title="Modifier votre profil";
+			break;
+			
+			case "fin_profil":
+			$page="include/fin_profil.php5";
+			$title="Fin de la modification de votre profil";
+			break;
+			
+			case "ajouter_article":
+			$page="include/ajouter_panier_article.php5";
+			$title="Ajout d'un article à votre panier";
+			break;
+			
+			case "ajouter_menu":
+			$page="include/ajouter_panier_menu.php5";
+			$title="Ajout d'un article à votre panier";
+			break;
+			
+			case "ajouter_perso":
+			$page="include/ajouter_panier_perso.php5";
+			$title="Ajout d'une crêpe personnalisée à votre panier";
+			break;
+			
+			case "modifier_article":
+			$page="include/modif_panier_article.php5";
+			$title="Modification d'un article sur votre panier";
+			break;
+			
+			case "modifier_menu":
+			$page="include/modif_panier_menu.php5";
+			$title="Modification d'un article sur votre panier";
+			break;
+			
+			case "modifier_perso":
+			$page="include/modif_panier_perso.php5";
+			$title="Modification d'une crêpe personnalisée sur votre panier";
+			break;
+			
+			case "valider_commande":
+			$page="include/valider_panier.php5";
+			$title="Validation de votre commande";
+			break;
+			
+			case "vider_panier":
+			$page="include/vider_panier.php5";
+			$title="Réinitialisation de votre panier";
 			break;
 		}
 	}

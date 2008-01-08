@@ -63,7 +63,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <td><xsl:copy-of select="$prix"/></td>
             <td>
              <form action="index.php5?page=ajouter_article" method="post">
-                <input type="hidden" name="type" value="Galette" />
+                <input type="hidden" name="type" value="Galette" /> 
 				<input type="hidden" name="description" value="{$nom}" />
                 <input type="hidden" name="id" value="{$nom}" />
                 <input type="hidden" name="prix" value="{$prix}" />

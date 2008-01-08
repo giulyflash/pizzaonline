@@ -32,7 +32,7 @@
 		if (is_object($Galettemenu)) {
 			echo "<input type='hidden' name='nbgalette' value='".$Galettemenu->nodeValue. "' />";
 			for($i=0;$i<$Galettemenu->nodeValue;$i++){
-				echo " Galette ".($i+1).": <select name='galette".($i+1)."' id='galette".($i+1)."' size=1 >"; selectItem($listeGalettes,0); 
+				echo " Galette ".($i+1).": <select name='galette".($i+1)."' id='galette".($i+1)."'  >"; selectItem($listeGalettes,0); 
 				echo "</select>";
 			}
 		}
@@ -41,7 +41,7 @@
 		if (is_object($Crepemenu)) {
 			echo "<input type='hidden' name='nbcrepe' value='".$Crepemenu->nodeValue. "' />";
 			for($i=0;$i<$Crepemenu->nodeValue;$i++){
-				echo " Crêpe ".($i+1).": <select name='crepe".($i+1)."' id='crepe".($i+1)."' size=1 >"; selectItem($listeCrepes,"0"); 
+				echo " Crêpe ".($i+1).": <select name='crepe".($i+1)."' id='crepe".($i+1)."'  >"; selectItem($listeCrepes,"0"); 
 				echo "</select>";
 			}
 		}
@@ -50,7 +50,7 @@
 		if (is_object($Dessertmenu)) {
 			echo "<input type='hidden' name='nbdessert' value='".$Dessertmenu->nodeValue. "' />";
 			for($i=0;$i<$Dessertmenu->nodeValue;$i++){
-				echo " Dessert ".($i+1).": <select name='dessert".($i+1)."' id='dessert".($i+1)."' size=1 >"; selectItem($listeDesserts,"0"); 
+				echo " Dessert ".($i+1).": <select name='dessert".($i+1)."' id='dessert".($i+1)."'  >"; selectItem($listeDesserts,"0"); 
 				echo "</select>";
 			}
 		}
@@ -59,7 +59,7 @@
 		if (is_object($Boissonmenu)) {
 			echo "<input type='hidden' name='nbboisson' value='".$Boissonmenu->nodeValue. "' />";
 			for($i=0;$i<$Boissonmenu->nodeValue;$i++){
-				echo " Boisson ".($i+1).": <select name='boisson".($i+1)."' id='boisson".($i+1)."' size=1 >"; selectItem($listeBoissons,"0"); 
+				echo " Boisson ".($i+1).": <select name='boisson".($i+1)."' id='boisson".($i+1)."'  >"; selectItem($listeBoissons,"0"); 
 				echo "</select>";
 			}
 		}
