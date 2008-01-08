@@ -1,9 +1,11 @@
 <?php
 	if(!$connecte)
 	{
-		echo '<div class="title">Erreur</div>
-			Vous devez être connecté pour valider votre commande.
-		';
+		echo '<h1>Erreur</h1>Vous devez être connecté pour valider votre commande.';
+	}
+	else if(empty($_SESSION['panier']))
+	{
+		echo '<h1>Erreur</h1>Au moins un article est nécessaire dans votre panier pour pouvoir valider votre commande.';
 	}
 	else
 	{	
