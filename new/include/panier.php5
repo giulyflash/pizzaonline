@@ -107,6 +107,20 @@
 					</td>
 				</tr>';
 			}
+			if(empty($value['nbdessert'])) $nbdessert = 0;
+			else $nbdessert = intval($value['nbdessert']);
+			for($i=0;$i<$nbdessert;$i++)
+			{
+				
+				echo '<tr>
+					<td>
+						Dessert n°'.($i+1).'
+					</td>
+					<td>
+						'.$value['dessert'.($i+1)].'
+					</td>
+				</tr>';
+			}
 			if(empty($value['nbboisson'])) $nbboisson = 0;
 			else $nbboisson = intval($value['nbboisson']);
 			for($i=0;$i<$nbboisson;$i++)

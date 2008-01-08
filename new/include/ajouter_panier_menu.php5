@@ -24,6 +24,12 @@ else
 			$_SESSION['panier']['menu'][ $_POST['idmenu'] ]['crepe'.($i+1)]=$_POST['crepe'.($i+1)];
 		}
 	}
+	if(!empty($_POST['nbdessert'])){
+		$_SESSION['panier']['menu'][ $_POST['idmenu'] ]['nbdessert'] = intval($_POST['nbdessert']);
+		for($i=0;$i<$_POST['nbdessert'];$i++){
+			$_SESSION['panier']['menu'][ $_POST['idmenu'] ]['dessert'.($i+1)]=$_POST['dessert'.($i+1)];
+		}
+	}
 	if(!empty($_POST['nbboisson'])){
 		$_SESSION['panier']['menu'][ $_POST['idmenu'] ]['nbboisson'] = intval($_POST['nbboisson']);
 		for($i=0;$i<$_POST['nbboisson'];$i++){
