@@ -10,7 +10,7 @@
 	// gestion des pseudo frame
 	if(empty($_GET['page']))
 	{
-		$page="includeAdmin/cuistot.php5";
+		$page="includeAdmin/cuistot.php";
 		$title="Accueil";
 	}
 	else
@@ -18,7 +18,7 @@
 		switch($_GET['page'])
 		{
 			case "commandes":
-			$page="includeAdmin/cuistot.php5";
+			$page="includeAdmin/cuistot.php";
 			$title="Ajouter une crêpes ou une gâlette";
 			break;
 			
@@ -27,10 +27,36 @@
 			$title="Ajouter une crêpes ou une gâlette";
 			break;
 			
-			case "supprimerCrepes":
-			$page="includeAdmin/supprimerCrepes.php5";
-			$title="Supprimer une crêpes ou une gâlette";
+			case "ajouterCrepesTraitement":
+			$page="includeAdmin/ajouterCrepesTraitement.php5";
+			$title="Ajouter une crêpes ou une gâlette";
 			break;
+			
+			case "modifierSupprimerCrepes":
+			$page="includeAdmin/modifierSupprimerCrepes.php5";
+			$title="Modifier ou supprimer une crêpes ou une gâlette";
+			break;
+			
+			case "formModifierCrepe":
+			$page="includeAdmin/formModifierCrepe.php5";
+			$title="Modifier ou supprimer une crêpes ou une gâlette";
+			break;
+			
+			case "formModifierGalette":
+			$page="includeAdmin/formModifierGalette.php5";
+			$title="Modifier ou supprimer une crêpes ou une gâlette";
+			break;
+			
+			case "modifierCrepesTraitement":
+			$page="includeAdmin/modifierCrepesTraitement.php5";
+			$title="Modifier ou supprimer une crêpes ou une gâlette";
+			break;
+			
+			case "supprimerCrepesTraitement":
+			$page="includeAdmin/supprimerCrepesTraitement.php5";
+			$title="Modifier ou supprimer une crêpes ou une gâlette";
+			break;
+			
 			
 		}
 	}
