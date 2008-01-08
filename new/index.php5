@@ -24,8 +24,8 @@
 						if($connecte)
 						{
 							echo 'Vous etes connectes en tant que : <a href="index.php5?page=profil">'.$login_name.'</a><br />
-							<a href="index.php5?page=historique">Historique</a><br/>
-							<a href="index.php5?page=deconnexion">Se deconnecter</a>';
+							<img src="interf/historique.png" /> <a href="index.php5?page=historique">Historique</a><br/>
+							<img src="interf/logout.png" /> <a href="index.php5?page=deconnexion">Déconnexion</a>';
 						}
 						else
 						{
@@ -36,7 +36,7 @@
 						<input type="password" name="login_pass" id="login_pass" />
 						<input type="submit" id="login_submit" value="S\'identifier" />
 					</form>
-                    <a href="index.php5?page=inscription">S\'inscrire</a>';
+                    <img src="interf/inscrire.png" /> <a href="index.php5?page=inscription">S\'inscrire</a>';
 						}
 					?>
                 </div>
@@ -62,7 +62,7 @@
             	<?php include($page); ?>
             </div>
             <div id="footer">
-                "La NAL, c'est bon, mangez-en!"©
+                Site crée par Laurent Gautho-lapeyre, Jennifer Henry, Sandie Ogier, Erwan Pinault
             </div>
         </div>
     </body>

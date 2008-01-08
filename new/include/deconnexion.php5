@@ -1,2 +1,2 @@
-<div class="title">Déconnexion réussie</div>
+<h1>Déconnexion réussie</h1>
 Vous êtes maintenant déconnectés.

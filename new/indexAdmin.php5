@@ -30,7 +30,7 @@
             	<?php include($page); ?>
             </div>
             <div id="footer">
-                "La NAL, c'est bon, mangez-en!"©            
+                Site crée par Laurent Gautho-lapeyre, Jennifer Henry, Sandie Ogier, Erwan Pinault         
             </div>
         </div>
 </body>

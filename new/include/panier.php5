@@ -1,4 +1,4 @@
-<div class="title">Vos articles</div>
+<h1>Vos articles</h1>
 <?php
 	if(empty($_SESSION['panier']['article']))
 	{
@@ -61,7 +61,7 @@
 		echo '</table>';
 	}
 ?>
-<div class="title">Vos menu</div>
+<h1>Vos menu</h1>
 <?php
 	if(empty($_SESSION['panier']['menu']))
 	{
@@ -163,7 +163,7 @@
 		
 	}
 ?>
-<div class="title">Vos crepes persos</div>
+<h1>Vos crepes persos</h1>
 <?php
 	if(empty($_SESSION['panier']['perso']))
 	{
@@ -230,9 +230,9 @@
 		echo '</table>';
 	}
 ?>
-
-<a href="index.php5?page=valider_commande">Commander</a>
-<a href="index.php5?page=vider_panier">Vider</a>
-<a href="index.php5?page=vider_panier&type=article">Vider les articles</a>
-<a href="index.php5?page=vider_panier&type=menu">Vider les menus</a>
-<a href="index.php5?page=vider_panier&type=perso">Vider les personnalisées</a>
+<br />
+<a class="nav_button" href="index.php5?page=valider_commande">Commander</a>
+<a class="nav_button" href="index.php5?page=vider_panier">Vider</a>
+<a class="nav_button" href="index.php5?page=vider_panier&type=article">Vider les articles</a>
+<a class="nav_button" href="index.php5?page=vider_panier&type=menu">Vider les menus</a>
+<a class="nav_button" href="index.php5?page=vider_panier&type=perso">Vider les personnalisées</a>

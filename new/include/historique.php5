@@ -1,4 +1,4 @@
-<div class="title">Historique de vos commandes</div>
+<h1>Historique de vos commandes<h1>
 <?php
 	require('outils/outilsBD.php');
 	require('fonctions.php5');
@@ -23,7 +23,7 @@
 	}
 	else
 	{
-		echo '<div class="title">Erreur</div>
+		echo '<h1>Erreur</h1>
 		Vous devez être connecté pour modifier votre profil';
 	}
 						

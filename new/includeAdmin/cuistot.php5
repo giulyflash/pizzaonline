@@ -5,13 +5,13 @@
 	}
 </script>
 <?php
-	echo ("<h1>Liste des commandes en cours</h1>");
+	echo "<h1>Liste des commandes en cours</h1>";
 	require('outils/outilsBD.php');
 	$res = queryDB("SELECT * FROM commandes WHERE livre=0 ORDER BY date, heure", 'select');
 	$i=1;
 	$row = mysql_fetch_assoc($res);
 	if ($row == 0) {
-		echo "Aucune :)";
+		echo "Aucune commande en cours.";
 	}
 	while($row){
 		$idCommande = $row["id"];
@@ -31,7 +31,7 @@
 			$prenomClient = $row2["prenom"];
 			echo $prenomClient." ".$nomClient;
 		}
-		echo ")<br/>";
+		echo ") --- ";
 		// date et heure de la commande
 		$date = $row["date"];
 		$heure = $row["heure"];
@@ -64,7 +64,7 @@
 		$i++;
 		echo "</ul></td></tr></table>";
 	}
-	echo "<br/><br/><font size=1>Dernière mise à jour le ".date("d-m-Y")." à ".date("H:i:s")."</font>";
+	echo "<font size=1>Dernière mise à jour le ".date("d-m-Y")." à ".date("H:i:s")."</font>";
 	function datefr($date) { 
 		$split = split("-",$date); 
 		$annee = $split[0]; 
@@ -80,11 +80,13 @@
 		if($idmenu!='') $linkitem=$idmenu;
 		else $linkitem=$item;
 		// switch
-		switch ($type) {
+		switch ($type)
+		{
 			case "Crepe":
 				echo $debutTitre.$quantite." x ".$item;
 				$result = $xpath->query("//Crepe[Nom='".$item."']/Ingredients/Ingredient");
-				if ($result->length != 0) {
+				if ($result->length != 0)
+				{
 					$trouve=true;
 					echo " (Crêpe standard) <a href=\"includeAdmin/itempret.php5?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a><ul>";
 					foreach ($result as $ing)
@@ -156,11 +158,11 @@
 				break;
 			default:
 				echo $debutTitre.$quantite." x ".$item."</li>";
-				echo "<div style='color:red'>!!! Item introuvable !!!<br/></div>";
+				echo "<div style='color:red'>!!! Item introuvable !!!</div>";
 				break;
 		}
 		if (!$trouve) {
-			echo "<div style='color:red'>!!! Item introuvable !!!<br/></div>";
+			echo "<div style='color:red'>!!! Item introuvable !!!</div>";
 		}
 	}
 ?>

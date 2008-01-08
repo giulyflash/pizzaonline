@@ -6,7 +6,7 @@ if($connecte)
 	$res=db_object_single($query);
 	db_close();
 	
-	echo '<div class="title">Modifier votre profil</div>
+	echo '<h1>Modifier votre profil</h1>
 <form id="inscription_form" action="index.php5?page=fin_profil" method="post">
     <div class="group">
 		Si vous ne souhaitez pas changer de mot de passe, laissez ces champs vides
@@ -34,6 +34,5 @@ if($connecte)
 }
 else
 {
-	echo '<div class="title">Erreur</div>
-Vous devez être connecté pour modifier votre profil';
+	echo '<h1>Erreur</h1>Vous devez être connecté pour modifier votre profil.';
 }

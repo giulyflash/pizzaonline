@@ -1,4 +1,4 @@
-<div class="title">S'inscrire</div>
+<h1>S'inscrire</h1>
 <form id="inscription_form" action="index.php5?page=fin_inscription" method="post">
 	<label for="login">Votre nom d'utilisateur (definitif)</label>
 	<input type="text" name="login" id="login" />

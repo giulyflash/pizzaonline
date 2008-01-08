@@ -1,12 +1,12 @@
 <?php
 	if($auth_error)
 	{
-		echo '<div class="title">Erreur à la connexion</div>
+		echo '<h1>Erreur à la connexion</h1>
 		Une erreur s\'est produite au moment de la connexion, verifiez votre nom d\'utilisateur et votre mot de passe.';
 	}
 	else
 	{
-		echo '<div class="title">Connexion réussie</div>
+		echo '<h1>Connexion réussie</h1>
 		Vous êtes maintenant connectés.
 		Vous pouvez faire votre commande ou modifier votre profil.';
 	}

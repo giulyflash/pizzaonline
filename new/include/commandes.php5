@@ -9,7 +9,7 @@
 	$date = $row["date"];
 	echo "Commande passée le ".datefr($date)." <br/>";
 ?>
-<div class="title">Vos articles</div>
+<h1>Vos articles</h1>
 <?php
 				// fichier xml
 				$dom_object = new DomDocument();
@@ -154,7 +154,7 @@
 					echo "</table>";
 				}
 ?>
-<div class="title">Vos menu</div>
+<h1>Vos menu</h1>
 <?php
 				// menus
 				$res3 = queryDB("SELECT item, type, quantite, pret FROM itemscommandes WHERE commande=".$idCommande." AND type='Menu'", 'select');
@@ -217,7 +217,7 @@
 					echo "</table>";
 				}
 ?>
-<div class="title">Vos crepes persos</div>
+<h1>Vos crepes persos</h1>
 <?php
 				// items
 				$res3 = queryDB("SELECT item, type, quantite, pret FROM itemscommandes WHERE commande=".$idCommande." AND type='Perso'", 'select');
@@ -278,4 +278,4 @@
 					echo "</table>";
 				}
 ?>
-<a href='index.php5?page=historique'>Retourner à l'historique</a> <br/>
+<a href='index.php5?page=historique'>Retour à l'historique</a>

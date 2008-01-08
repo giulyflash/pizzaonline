@@ -1,7 +1,7 @@
 <?php
 	if(empty($_POST['id']) || empty($_POST['type']))
 	{
-		echo '<div class="title">Erreur</div>Erreur dans la selection de l\'article du panier.';
+		echo '<h1>Erreur</h1>Erreur dans la selection de l\'article du panier.';
 		echo '<br /><a href="index.php5?page=panier">Retour à votre panier</a>';
 	}
 	else
@@ -27,7 +27,7 @@
 			unset($_SESSION['panier']['menu'][$_POST['id']]);
 			break;
 		}
-		echo '<div class="title">Modification effectuée</div>Votre selection a été modifiée sur votre panier.';
+		echo '<h1>Modification effectuée</h1>Votre selection a été modifiée sur votre panier.';
 		echo '<br /><a href="index.php5?page=panier">Retour à votre panier</a>';
 	}
 ?>

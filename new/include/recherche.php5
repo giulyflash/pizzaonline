@@ -1,6 +1,6 @@
 <?php
  	require('outils/outilsBD.php');
- 	echo ("<div class=\"title\">Recherche</div>");
+ 	echo ("<h1>Recherche</h1>");
 	echo ("Ingredients<form name = 'formRecherche' action='index.php5?page=recherche' method='post'> <select name='choix'>");
 	
 	$res1 = queryDB("SELECT ingredient FROM stocks WHERE crepable = 1", 'select');
