@@ -1,6 +1,8 @@
-<h1>Nos menu</h1>
+
+<div class="title">Nos menu</div>
 <?php
  	include_once 'fonctions.php5';
+	
 	
 	$xml = new DOMDocument;
 	$xml->load("xml/menus.xml");
@@ -11,14 +13,12 @@
 	$listeMenus = $xml->getElementsByTagName('Menu');
 	$listeGalettes = $Nouriturexml->getElementsByTagName('Galette');
 	$listeCrepes = $Nouriturexml->getElementsByTagName('Crepe');
-	$listeDesserts = $Nouriturexml->getElementsByTagName('Dessert');
 	$listeBoissons = $Nouriturexml->getElementsByTagName('Boisson');
 	
 	foreach($listeMenus as $menu){
 		$nommenu = $menu->getElementsByTagName('Nom')->item(0);
 		$Galettemenu = $menu->getElementsByTagName('Galette')->item(0);
 		$Crepemenu = $menu->getElementsByTagName('Crepe')->item(0);
-		$Dessertmenu = $menu->getElementsByTagName('Dessert')->item(0);
 		$Boissonmenu = $menu->getElementsByTagName('Boisson')->item(0);
 		$prixmenu = $menu->getElementsByTagName('Prix')->item(0);
 		$idmenu ="";
@@ -51,18 +51,6 @@
 		}
 		echo"</td></tr>";
 		echo"<tr><td>";
-		if (is_object($Dessertmenu)) {
-			echo "<input type='hidden' name='nbdessert' value='".$Dessertmenu->nodeValue. "' />";
-			for($i=0;$i<$Dessertmenu->nodeValue;$i++){
-				echo " Dessert ".($i+1).": <select name='dessert".($i+1)."' id='dessert".($i+1)."' size=1 >"; $dessert=selectItem($listeDesserts,1); 
-				echo "</select>";
-				$id_dessert = $dessert->getAttribute("id");
-				$idmenu .= $id_dessert;
-				echo "<input type='hidden' name='iddessert".($i+1)."' value='".$id_dessert. "' />";
-			}
-		}
-		echo"</td></tr>";
-		echo"<tr><td>";
 		if (is_object($Boissonmenu)) {
 			echo "<input type='hidden' name='nbboisson' value='".$Boissonmenu->nodeValue. "' />";
 			for($i=0;$i<$Boissonmenu->nodeValue;$i++){
@@ -74,10 +62,22 @@
 			}
 		}
 		echo"</td></tr>";
+		//echo "<tr><td> Prix ".$prixmenu->nodeValue. "</td></tr>";
 		echo "<input type='hidden' name='prix' value='".$prixmenu->nodeValue. "' />";
 		echo "<input type='hidden' name='send' value='1' />";
 		echo "<input type='hidden' name='idmenu' value='".$idmenu. "' />";
 		echo "<tr><td> Quantité <input type='text' name='quantite' id='quantite' value='1' /> Commander <input type='image' src='interf/panier.gif' border='0' name='submit' alt='Go'></td></tr>";
 		echo"</form></table>";
 	}
+
+	/*
+	$xsl = new DOMDocument;
+	$xsl->load("xslt/AffMenu.xsl");
+	
+	// Configuration du transformateur
+	$proc = new XSLTProcessor;
+	$proc->importStyleSheet($xsl); // attachement des règles xsl
+	
+	$res=$proc->transformToXML($xml);
+	print "$res";*/
 ?>
