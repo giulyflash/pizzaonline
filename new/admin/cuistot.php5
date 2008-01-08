@@ -1,14 +1,7 @@
 <script type="text/javascript">
-	function pret(commande, item, pret, parent){
-		//alert(item);
-		p=1;
-		if (pret==1) p=0;
-		window.location.href = 'cuistot/itempret.php?commande='+commande+'&item='+item+'&pret='+p+'&parent='+parent;
-	}
-	function livrer(commande){
-		if (confirm('La commande est prête à être livrée ?')) {
-			window.location.href = 'cuistot/commandeprete.php?id='+commande;
-		}
+	function livrer()
+	{
+		return(confirm('La commande est prÃªte Ã  Ãªtre livrÃ©e ?'));
 	}
 </script>
 <?php
@@ -23,7 +16,7 @@
 	while($row){
 		$idCommande = $row["id"];
 		echo "<table><tr><td>";
-		echo "<h2 onclick=\"livrer('".$idCommande."')\">Commande $i</h2>";
+		echo "<h2>Commande ".$i." <a href=\"cuistot/commandeprete.php?id=".$idCommande."\" onclick=\"if(!livrer()) return false;\"><img src=\"interf/livrer.png\"></a></h2>";
 		echo "<div class=\"info\">";
 		// client
 		$client = $row["client"];
@@ -36,18 +29,19 @@
 		else {
 			$nomClient = $row2["nom"];
 			$prenomClient = $row2["prenom"];
-			echo "$prenomClient $nomClient";
+			echo $prenomClient." ".$nomClient;
 		}
 		echo ")<br/>";
 		// date et heure de la commande
 		$date = $row["date"];
 		$heure = $row["heure"];
-		echo "Commande passée le ".datefr($date)." à $heure<br/>";
+		echo "Commande passÃ©e le ".datefr($date)." Ã  $heure<br/>";
+		echo "</div><ul>";
 		// items
 		$res3 = queryDB("SELECT item, type, quantite, pret FROM itemscommandes WHERE commande=".$idCommande, 'select');
 		$row3 = mysql_fetch_assoc($res3);
 		if ($row3 == 0) {
-			echo "!!! Aucun item commandé !!!<br/>";
+			echo "!!! Aucun item commandÃ© !!!<br/>";
 		}
 		else {
 			$j=0;
@@ -68,51 +62,53 @@
 		}
 		$row = mysql_fetch_assoc($res);
 		$i++;
-		echo "</td></tr></table>";
+		echo "</ul></td></tr></table>";
 	}
-	echo "<br/><br/><font size=1>Dernière mise à jour le ".date("d-m-Y")." à ".date("H:i:s")."</font>";
+	echo "<br/><br/><font size=1>DerniÃ¨re mise Ã  jour le ".date("d-m-Y")." Ã  ".date("H:i:s")."</font>";
 	function datefr($date) { 
 		$split = split("-",$date); 
 		$annee = $split[0]; 
 		$mois = $split[1]; 
 		$jour = $split[2]; 
-		return "$jour"."-"."$mois"."-"."$annee"; 
+		return $jour."-".$mois."-".$annee; 
 	}
-	function echoItem ($idCommande, $item, $quantite, $pret, $type, $xpath, $parent){
-		if ($pret) {
-			$couleur = "gray";
-		}
-		else {
-			$couleur = "black";
-		}
-		$debutTitre = "<h4 style='color:".$couleur."' onclick=\"pret('".$idCommande."','".$item."','".$pret."', '".$parent."')\">";
+	function echoItem ($idCommande, $item, $quantite, $pret, $type, $xpath, $parent, $idmenu=''){
+		$classe=($pret)?"pret":"nonpret";
+		$pret=($pret==0)?"1":"0";
+		$debutTitre = "<li class=\"".$classe."\">";
 		$trouve = false;
+		if($idmenu!='') $linkitem=$idmenu;
+		else $linkitem=$item;
 		// switch
 		switch ($type) {
 			case "Crepe":
-				echo $debutTitre."$quantite x $item</h4>";
-				$result = $xpath->query("//Crepe[Nom='$item']/Ingredients/Ingredient");
+				echo $debutTitre.$quantite." x ".$item;
+				$result = $xpath->query("//Crepe[Nom='".$item."']/Ingredients/Ingredient");
 				if ($result->length != 0) {
 					$trouve=true;
-					echo "<em style='color:".$couleur."'>Crêpe standard</em><br/>";
-					foreach ($result as $ing) {
-						echo "<div style='color:".$couleur."'>".$ing->nodeValue."</div>";   
+					echo " (CrÃªpe standard) <a href=\"cuistot/itempret.php?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a><ul>";
+					foreach ($result as $ing)
+					{
+						echo "<li>".$ing->nodeValue."</li>";   
 					}
+					echo "</ul></li>";
 				}
 				break;
 			case "Galette":
-				echo $debutTitre."$quantite x $item</h4>";
-				$result = $xpath->query("//Galette[Nom='$item']/Ingredients/Ingredient");
+				echo $debutTitre.$quantite." x ".$item;
+				$result = $xpath->query("//Galette[Nom='".$item."']/Ingredients/Ingredient");
 				if ($result->length != 0) {
 					$trouve=true;
-					echo "<em style='color:".$couleur."'>Galette standard</em><br/>";
-					foreach ($result as $ing) {
-						echo "<div style='color:".$couleur."'>".$ing->nodeValue."</div>"; 
+					echo " (Galette standard) <a href=\"cuistot/itempret.php?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a><ul>";
+					foreach ($result as $ing)
+					{
+						echo "<li>".$ing->nodeValue."</li>"; 
 					}
+					echo "</ul></li>";
 				}
 				break;
 			case "Perso":
-				echo $debutTitre."$quantite x Perso</h4>";
+				echo $debutTitre.$quantite." x Perso";
 				$res4 = queryDB("SELECT ingredient FROM ingredientsperso WHERE idperso='".$item."'", 'select');
 				$row4 = mysql_fetch_assoc($res4);
 				if ($row4 != 0) {
@@ -120,48 +116,46 @@
 					$res5 = queryDB("SELECT sucre FROM perso WHERE idperso='".$item."'", 'select');
 					$row5 = mysql_fetch_assoc($res5);
 					$sucre = $row5["sucre"];
-					if ($sucre) {
-						echo "<em style='color:".$couleur."'>Crêpe perso</em><br/>";
-					}
-					else {
-						echo "<em style='color:".$couleur."'>Galette perso</em><br/>";
-					}
+					echo " (".(($sucre)?"CrÃªpe":"Galette").") <a href=\"cuistot/itempret.php?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a><ul>";
 					$k=0;
 					while($row4){
 						$ingredient = $row4["ingredient"];
-						echo "<div style='color:".$couleur."'>".$ingredient."</div>";
+						echo "<li>".$ingredient."</li>";
 						$row4 = mysql_fetch_assoc($res4);
 						$k++;
 					}
+					echo "</ul></li>";
 				}
 				break;
 			case "Dessert":
-				echo $debutTitre."$quantite x $item</h4><em style='color:".$couleur."'>Dessert</em><br/>";
-				$result = $xpath->query("//Dessert[Nom='$item']");
+				echo $debutTitre.$quantite." x ".$item." (Dessert) <a href=\"cuistot/itempret.php?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a>";
+				$result = $xpath->query("//Dessert[Nom='".$item."']");
 				if ($result->length != 0) {
 					$trouve=true;
 				}
+				echo "</li>";
 				break;
 			case "Boisson":
-				echo $debutTitre."$quantite x $item</h4><em style='color:".$couleur."'>Boisson</em><br/>";
-				$result = $xpath->query("//Boisson[Nom='$item']");
+				echo $debutTitre.$quantite." x ".$item." (Boisson) <a href=\"cuistot/itempret.php?commande=".$idCommande."&item=".$linkitem."&pret=".$pret."&parent=".$parent."\"><img src=\"interf/livrer.png\"></a>";
+				$result = $xpath->query("//Boisson[Nom='".$item."']");
 				if ($result->length != 0) {
 					$trouve=true;
 				}
+				echo "</li>";
 				break;
 			case "Menu":
-				$res4 = queryDB("SELECT item, type, pret FROM itemsmenus WHERE idmenu=".$item, 'select');
+				$res4 = queryDB("SELECT item, type, pret,id FROM itemsmenus WHERE idmenu=".$item, 'select');
 				$row4 = mysql_fetch_assoc($res4);
 				$k=0;
 				while($row4){
 					$trouve = true;
-					echoItem ($idCommande, $row4["item"], $quantite, $row4["pret"], $row4["type"], $xpath, "Menu");
+					echoItem ($item, $row4["item"], $quantite, $row4["pret"], $row4["type"], $xpath, "Menu", $row4["id"]);
 					$row4 = mysql_fetch_assoc($res4);
 					$k++;
 				}
 				break;
 			default:
-				echo $debutTitre."$quantite x $item</h4>";
+				echo $debutTitre.$quantite." x ".$item."</li>";
 				echo "<div style='color:red'>!!! Item introuvable !!!<br/></div>";
 				break;
 		}
