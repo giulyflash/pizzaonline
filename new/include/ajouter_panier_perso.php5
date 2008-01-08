@@ -7,11 +7,10 @@
 	}
 	else
 	{
-	
 		$id_perso="";
 		foreach ($_POST['ingredient'] as $ingredient)
 		{
-			$id_perso+=$ingredient;
+			$id_perso.=$ingredient;
 		}
 		$_SESSION['panier']['perso'][$id_perso]['type']=$_POST['type'];
 		$_SESSION['panier']['perso'][$id_perso]['prix']=$_POST['prix'];

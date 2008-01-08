@@ -11,7 +11,7 @@
 	if(empty($_GET['page']))
 	{
 		$page="includeAdmin/cuistot.php5";
-		$title="Accueil";
+		$title="Liste des commandes";
 	}
 	else
 	{
@@ -19,7 +19,7 @@
 		{
 			case "commandes":
 			$page="includeAdmin/cuistot.php5";
-			$title="Ajouter une crêpes ou une gâlette";
+			$title="Liste des commandes";
 			break;
 			
 			case "ajouterCrepes":

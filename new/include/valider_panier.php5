@@ -218,7 +218,7 @@
 					$id_perso=db_last_id();
 					foreach($_SESSION['panier']['perso'][$key]['ingredient'] as $ingredient)
 					{
-						db_query('INSERT INTO ingredientsperso(idperso,ingredient) VALUES(\''.$id.'\', \''.$ingredient.'\')');
+						db_query('INSERT INTO ingredientsperso(idperso,ingredient) VALUES(\''.$id_perso.'\', \''.$ingredient.'\')');
 					}
 					db_query('INSERT INTO itemscommandes(commande,item,quantite,pret,type) VALUES(\''.$id_commande.'\', \''.$id.'\', \''.$value['quantite'].'\', 0, \'Perso\')');
 				}
