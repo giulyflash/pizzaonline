@@ -18,7 +18,6 @@
         else
         {
             $racine = $dom->documentElement;
-            $id = $dom->getElementsByTagName($_POST['type'])->length + 1;
 			if(!empty($_POST['nom']))
 			{
 				 $nom = $_POST['nom'];
@@ -37,7 +36,6 @@
 			if ($result->length == 0) 
 			{
 				$type_xml = $dom->createElement($_POST['type']);
-				$type_xml->setAttribute("id",$id);
 				
 				$nom_xml = $dom->createElement("Nom");
 				$nom_xml_text = $dom->createTextNode($nom);

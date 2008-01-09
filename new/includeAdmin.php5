@@ -67,7 +67,7 @@
 			$title="Mettre a jour les ingredients";
 			break;
 			
-			case "ajoutIngredientTraitement":
+			case "ajoutIngredient":
 			$page="includeAdmin/ajoutIngredient.php5";
 			$title="Ajouter de nouveau ingredient";
 			break;

@@ -43,4 +43,4 @@
 		<Nom>Tarte au citron</Nom>
 		<Prix>6,00</Prix>
 	</Dessert>
-<Crepe id="2"><Nom>tutu</Nom><Prix>123</Prix><Ingredients><Ingredient>Beurre</Ingredient></Ingredients></Crepe><Galette id="2"><Nom>pol3</Nom><Prix>14</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Champignon</Ingredient></Ingredients></Galette><Galette id="3"><Nom>lele</Nom><Prix>123</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Champignon</Ingredient><Ingredient>Emmental</Ingredient></Ingredients></Galette></Creperie>
+<Crepe id="2"><Nom>tutu</Nom><Prix>123</Prix><Ingredients><Ingredient>Beurre</Ingredient></Ingredients></Crepe><Galette id="2"><Nom>pol3</Nom><Prix>14</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Champignon</Ingredient></Ingredients></Galette><Galette id="3"><Nom>lele</Nom><Prix>123</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Champignon</Ingredient><Ingredient>Emmental</Ingredient></Ingredients></Galette><Galette><Nom>toto</Nom><Prix>5</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Champignon</Ingredient><Ingredient>Emmental</Ingredient></Ingredients></Galette></Creperie>
