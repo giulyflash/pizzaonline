@@ -258,7 +258,7 @@
 			
 			db_close();
 			echo '<div class="title">Commande effectuée</div>
-				Votre a été effectuée.
+				Votre commande a été effectuée.
 			';
 		}
 	}
