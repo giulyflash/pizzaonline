@@ -11,13 +11,16 @@
 <?php
 	require('outils/outilsBD.php');
 	echo "<h1>Liste des items en pénurie</h1>";
-	$res = queryDB("SELECT ingredient FROM stocks WHERE quantite < seuil", 'select');
+	$res = queryDB("SELECT ingredient, quantite, seuil FROM stocks WHERE quantite < seuil", 'select');
 	$i=1;
 	$row = mysql_fetch_assoc($res);
 	if ($row == 0) {
-		echo "Aucune item en pénurie.";
+		echo "Aucun item en pénurie.";
 	}
 	while($row){
+		echo "<table><tr><td>";
+		echo "<div>".$row["ingredient"]." (".$row["quantite"]." < ".$row["seuil"].")</div>";
+		echo "</td></tr></table>";
 		$row = mysql_fetch_assoc($res);
 	}
 	echo "<h1>Liste des commandes en cours</h1>";
