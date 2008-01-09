@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Creperie>
+
+		<Galette><Nom>Jambon</Nom><Ingredients>
+				<Ingredient>Jambon</Ingredient>
+			</Ingredients><Prix>4,00</Prix></Galette>
+		<Galette><Nom>Fromage</Nom><Ingredients>
+				<Ingredient>Emmental</Ingredient>
+			</Ingredients><Prix>4,00</Prix></Galette>
+		<Galette><Nom>Oeuf</Nom><Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+			</Ingredients><Prix>4,00</Prix></Galette>
+		<Galette><Nom>Oeuf et Jambon</Nom><Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+				<Ingredient>Jambon</Ingredient>
+			</Ingredients><Prix>5,00</Prix></Galette>
+		<Galette><Nom>Oeuf et Fromage</Nom><Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+				<Ingredient>Emmental</Ingredient>
+			</Ingredients><Prix>5,00</Prix></Galette>
+		<Galette><Nom>Printaniere</Nom><Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+				<Ingredient>Salade</Ingredient>
+				<Ingredient>Tomate</Ingredient>
+			</Ingredients><Prix>6,00</Prix></Galette>
+		<Galette><Nom>Ty Breiz</Nom><Ingredients>
+				<Ingredient>Saucisse</Ingredient>
+				<Ingredient>Emmental</Ingredient>
+			</Ingredients><Prix>6,00</Prix></Galette>
+		<Galette><Nom>Crepe Maison</Nom><Ingredients>
+				<Ingredient>Jambon</Ingredient>
+				<Ingredient>Emmental</Ingredient>
+				<Ingredient>Champignon</Ingredient>
+			</Ingredients><Prix>6,00</Prix></Galette>
+		<Crepe><Nom>Crepe au sucre</Nom><Ingredients>
+				<Ingredient>Sucre</Ingredient>
+			</Ingredients><Prix>6,00</Prix></Crepe>
+	
+    <Titre>CREPERIE</Titre>
+	<Galette id="1">
+		<Nom>Jambon</Nom>
+		<Prix>4,00</Prix>
+		<Ingredients>
+			<Ingredient>Jambon</Ingredient>
+		</Ingredients>
+	</Galette>
+	<Galette id="2">
+		<Nom>Galette Maison</Nom>
+		<Prix>6,00</Prix>
+		<Ingredients>
+			<Ingredient>Jambon</Ingredient>
+			<Ingredient>Emmental</Ingredient>
+			<Ingredient>Champignon</Ingredient>
+		</Ingredients>
+	</Galette>
+	<Crepe id="1">
+		<Nom>Beurre Sucre</Nom>
+		<Prix>4,00</Prix>
+		<Ingredients>
+			<Ingredient>Beurre</Ingredient>
+			<Ingredient>Sucre</Ingredient>
+		</Ingredients>
+	</Crepe>
+	<Crepe id="2">
+		<Nom>Nutella</Nom>
+		<Prix>5,00</Prix>
+		<Ingredients>
+			<Ingredient>Nutella</Ingredient>
+		</Ingredients>
+	</Crepe>
+	<Boisson id="1">
+		<Nom>Coca</Nom>
+		<Prix>3,00</Prix>
+	</Boisson>
+	<Boisson id="2">
+		<Nom>Biere</Nom>
+		<Prix>4,00</Prix>
+	</Boisson>
+	<Dessert id="1">
+		<Nom>Brownie</Nom>
+		<Prix>4,00</Prix>
+	</Dessert>
+	<Dessert id="2">
+		<Nom>Tarte au citron</Nom>
+		<Prix>6,00</Prix>
+	</Dessert>
+	<Boisson>
+		<Nom>Coca Cola</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Coca Cola Light</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Coca Cola Lime</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Coca Cola Zero</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Orangina</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Orangina Light</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Perrier</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Badoit</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Evian</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Volvic</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Diabolo menthe</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Diabolo fraise</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Jus d'ananas</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Jus de pomme</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Jus d'orange</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Jus multivitamine</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Boisson>
+		<Nom>Limonade</Nom>
+		<Prix>2,00</Prix>
+	</Boisson>
+	<Dessert>
+		<Nom>crêpe au sucre</Nom>
+		<Prix>4,00</Prix>
+	</Dessert>
+	<Dessert>
+		<Nom>crêpe nutella</Nom>
+		<Prix>4,00</Prix>
+	</Dessert>
+	<Dessert>
+		<Nom>crêpe Grand-Marnier</Nom>
+		<Prix>4,00</Prix>
+	</Dessert>
+	<Dessert>
+		<Nom>sorbet 2 boules</Nom>
+		<Prix>4,00</Prix>
+	</Dessert>
+	<Dessert>
+		<Nom>tartelette au citron</Nom>
+		<Prix>4,00</Prix>
+	</Dessert>
+	<Dessert>
+		<Nom>brownie</Nom>
+		<Prix>4,00</Prix>
+	</Dessert>
+	<Dessert>
+		<Nom>fruit de saison</Nom>
+		<Prix>4,00</Prix>
+	</Dessert>
+</Creperie>

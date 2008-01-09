@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Menus>
+
+	<Menu>
+		<Nom>Solo</Nom>
+		<Galette>1</Galette>
+		<Crepe>1</Crepe>
+		<Boisson>1</Boisson>
+		<Prix>10,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Duo Racho</Nom>
+		<Galette>2</Galette>
+		<Crepe>0</Crepe>
+		<Boisson>0</Boisson>
+		<Prix>20,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Amoureux</Nom>
+		<Galette>2</Galette>
+		<Crepe>0</Crepe>
+		<Boisson>2</Boisson>
+		<Prix>40,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Familio</Nom>
+		<Galette>4</Galette>
+		<Crepe>2</Crepe>
+		<Boisson>2</Boisson>
+		<Prix>50,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Quatre-heure pour quatre</Nom>
+		<Galette>0</Galette>
+		<Crepe>4</Crepe>
+		<Boisson>4</Boisson>
+		<Prix>30,00</Prix>
+	</Menu>
+
+	<Menu>
+		<Nom>Solo</Nom>
+		<Galette>1</Galette>
+		<Crepe>1</Crepe>
+		<Boisson>1</Boisson>
+		<Prix>10,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Duo</Nom>
+		<Galette>2</Galette>
+		<Crepe>2</Crepe>
+		<Boisson>2</Boisson>
+		<Prix>15,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Dessert</Nom>
+		<Crepe>2</Crepe>
+		<Boisson>2</Boisson>
+		<Prix>15,00</Prix>
+	</Menu>
+</Menus>

@@ -1,0 +1,37 @@
+<Menus>
+	<Menu>
+		<Nom>Solo</Nom>
+		<CrepeSalee>1</CrepeSalee>
+		<CrepeSucree>1</CrepeSucree>
+		<Item>1</Item>
+		<Prix>10,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Duo Racho</Nom>
+		<CrepeSalee>2</CrepeSalee>
+		<CrepeSucree>0</CrepeSucree>
+		<Item>0</Item>
+		<Prix>20,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Amoureux</Nom>
+		<CrepeSalee>2</CrepeSalee>
+		<CrepeSucree>0</CrepeSucree>
+		<Item>2</Item>
+		<Prix>40,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Familio</Nom>
+		<CrepeSalee>4</CrepeSalee>
+		<CrepeSucree>2</CrepeSucree>
+		<Item>2</Item>
+		<Prix>50,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Quatre-heure pour quatre</Nom>
+		<CrepeSalee>0</CrepeSalee>
+		<CrepeSucree>4</CrepeSucree>
+		<Item>4</Item>
+		<Prix>30,00</Prix>
+	</Menu>
+</Menus>

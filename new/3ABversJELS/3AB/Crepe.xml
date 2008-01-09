@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creperie>
+	<Crepes>
+		<Crepe>
+			<Nom>Jambon</Nom>
+			<Prix>4,00</Prix>
+			<Base>Sel</Base>
+			<Ingredients>
+				<Ingredient>Jambon</Ingredient>
+			</Ingredients>
+		</Crepe>
+		<Crepe>
+			<Nom>Fromage</Nom>
+			<Prix>4,00</Prix>
+			<Base>Sel</Base>
+			<Ingredients>
+				<Ingredient>Emmental</Ingredient>
+			</Ingredients>
+		</Crepe>
+		<Crepe>
+			<Nom>Oeuf</Nom>
+			<Prix>4,00</Prix>
+			<Base>Sel</Base>
+			<Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+			</Ingredients>
+		</Crepe>
+		<Crepe>
+			<Nom>Oeuf et Jambon</Nom>
+			<Prix>5,00</Prix>
+			<Base>Sel</Base>
+			<Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+				<Ingredient>Jambon</Ingredient>
+			</Ingredients>
+		</Crepe>
+		<Crepe>
+			<Nom>Oeuf et Fromage</Nom>
+			<Prix>5,00</Prix>
+			<Base>Sel</Base>
+			<Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+				<Ingredient>Emmental</Ingredient>
+			</Ingredients>
+		</Crepe>
+		<Crepe>
+			<Nom>Printaniere</Nom>
+			<Prix>6,00</Prix>
+			<Base>Sel</Base>
+			<Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+				<Ingredient>Salade</Ingredient>
+				<Ingredient>Tomate</Ingredient>
+			</Ingredients>
+		</Crepe>
+		<Crepe>
+			<Nom>Ty Breiz</Nom>
+			<Prix>6,00</Prix>
+			<Base>Sel</Base>
+			<Ingredients>
+				<Ingredient>Saucisse</Ingredient>
+				<Ingredient>Emmental</Ingredient>
+			</Ingredients>
+		</Crepe>
+		<Crepe>
+			<Nom>Crepe Maison</Nom>
+			<Prix>6,00</Prix>
+			<Base>Sel</Base>
+			<Ingredients>
+				<Ingredient>Jambon</Ingredient>
+				<Ingredient>Emmental</Ingredient>
+				<Ingredient>Champignon</Ingredient>
+			</Ingredients>
+		</Crepe>
+		<Crepe>
+			<Nom>Crepe au sucre</Nom>
+			<Prix>6,00</Prix>
+			<Base>Sucre</Base>
+			<Ingredients>
+				<Ingredient>Sucre</Ingredient>
+			</Ingredients>
+		</Crepe>
+	</Crepes>
+</Creperie>

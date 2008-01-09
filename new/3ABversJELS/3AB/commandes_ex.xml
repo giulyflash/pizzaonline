@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Commandes>
+	<Commande>
+		<id>id6</id>
+		<client>IFIPS</client>
+		<Menus>
+			<Menu>
+				<Nom>Solo</Nom>
+				<CrepesSalees>
+					<CrepeSalee>Ty Breiz</CrepeSalee>
+				</CrepesSalees>
+				<CrepesSucrees>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+				</CrepesSucrees>
+				<Item>
+					<Boisson>Orangina</Boisson>
+				</Item>
+			</Menu>
+		</Menus>
+		<Crepes>
+			<CrepesSucrees>
+				<CrepeSucree>Crepe au sucre</CrepeSucree>
+			</CrepesSucrees>
+			<CrepesSalees>
+				<CrepeSalee>Ty Breiz</CrepeSalee>
+				<CrepeSalee>Jambon</CrepeSalee>
+			</CrepesSalees>
+		</Crepes>
+	</Commande>
+	<Commande>
+		<id>id4</id>
+		<client>IFIPS</client>
+		<Menus>
+			<Menu>
+				<Nom>Amoureux</Nom>
+				<CrepesSalees>
+					<CrepeSalee>Ty Breiz</CrepeSalee>
+					<CrepeSalee>Jambon</CrepeSalee>
+				</CrepesSalees>
+				<Item>
+					<Boisson>Orangina</Boisson>
+					<Dessert>fruit de saison</Dessert>
+				</Item>
+			</Menu>
+			<Menu>
+				<Nom>Familio</Nom>
+				<CrepesSalees>
+					<CrepeSalee>Ty Breiz</CrepeSalee>
+					<CrepeSalee>Jambon</CrepeSalee>
+					<CrepeSalee>Oeuf</CrepeSalee>
+					<CrepeSalee>Printaniere</CrepeSalee>
+				</CrepesSalees>
+				<CrepesSucrees>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+				</CrepesSucrees>
+				<Item>
+					<Boisson>Coca Cola Light</Boisson>
+					<Dessert>brownie</Dessert>
+				</Item>
+			</Menu>
+		</Menus>
+		<Crepes>
+			<CrepesSucrees>
+				<CrepeSucree>Crepe au sucre</CrepeSucree>
+			</CrepesSucrees>
+		</Crepes>
+		<Item>
+			<Boisson>Coca Cola Light</Boisson>
+			<Dessert>brownie</Dessert>
+		</Item>
+	</Commande>
+	<Commande>
+		<id>id44</id>
+		<client>IFIPS</client>
+		<Menus>
+			<Menu>
+				<Nom>Duo Racho</Nom>
+				<CrepesSalees>
+					<CrepeSalee>Ty Breiz</CrepeSalee>
+					<CrepeSalee>Printaniere</CrepeSalee>
+				</CrepesSalees>
+			</Menu>
+		</Menus>
+		<Crepes>
+			<CrepesSucrees>
+				<CrepeSucree>Crepe au sucre</CrepeSucree>
+			</CrepesSucrees>
+		</Crepes>
+	</Commande>
+	<Commande>
+		<id>id5</id>
+		<client>IFIPS</client>
+		<Menus>
+			<Menu>
+				<Nom>Quatre-heure pour quatre</Nom>
+				<CrepesSucrees>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+				</CrepesSucrees>
+				<Item>
+					<Boisson>Coca Cola Light</Boisson>
+					<Dessert>brownie</Dessert>
+					<Boisson>Orangina</Boisson>
+					<Dessert>brownie</Dessert>
+				</Item>
+			</Menu>
+		</Menus>
+	</Commande>
+	<Commande>
+		<id>id9</id>
+		<client>IFIPS</client>
+		<Menus>
+			<Menu>
+				<Nom>Amoureux</Nom>
+				<CrepesSalees>
+					<CrepeSalee>Ty Breiz</CrepeSalee>
+					<CrepeSalee>Jambon</CrepeSalee>
+				</CrepesSalees>
+				<Item>
+					<Boisson>Orangina</Boisson>
+					<Dessert>fruit de saison</Dessert>
+				</Item>
+			</Menu>
+			<Menu>
+				<Nom>Familio</Nom>
+				<CrepesSalees>
+					<CrepeSalee>Ty Breiz</CrepeSalee>
+					<CrepeSalee>Jambon</CrepeSalee>
+					<CrepeSalee>Oeuf</CrepeSalee>
+					<CrepeSalee>Printaniere</CrepeSalee>
+				</CrepesSalees>
+				<CrepesSucrees>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+				<!--	<CrepeSucree>crepe nutella</CrepeSucree>-->
+				</CrepesSucrees>
+				<Item>
+					<Boisson>Coca Cola Light</Boisson>
+					<Dessert>brownie</Dessert>
+				</Item>
+			</Menu>
+		</Menus>
+		<Crepes>
+			<CrepesSucrees>
+				<CrepeSucree>Crepe au sucre</CrepeSucree>
+			</CrepesSucrees>
+		</Crepes>
+		<Item>
+			<Boisson>Coca Cola Light</Boisson>
+			<Dessert>brownie</Dessert>
+		</Item>
+	</Commande>
+	<Commande>
+		<id>id10</id>
+		<client>IFIPS</client>
+		<Menus>
+			<Menu>
+				<Nom>Duo Racho</Nom>
+				<CrepesSalees>
+					<CrepeSalee>Ty Breiz</CrepeSalee>
+					<CrepeSalee>Printaniere</CrepeSalee>
+				</CrepesSalees>
+			</Menu>
+		</Menus>
+		<Crepes>
+			<CrepesSucrees>
+				<CrepeSucree>Crepe au sucre</CrepeSucree>
+			</CrepesSucrees>
+		</Crepes>
+	</Commande>
+	<Commande>
+		<id>id12</id>
+		<client>IFIPS</client>
+		<Menus>
+			<Menu>
+				<Nom>Quatre-heure pour quatre</Nom>
+				<CrepesSucrees>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+					<CrepeSucree>Crepe au sucre</CrepeSucree>
+				</CrepesSucrees>
+				<Item>
+					<Boisson>Coca Cola Light</Boisson>
+					<Dessert>brownie</Dessert>
+					<Boisson>Orangina</Boisson>
+					<Dessert>brownie</Dessert>
+				</Item>
+			</Menu>
+		</Menus>
+	</Commande>
+</Commandes>

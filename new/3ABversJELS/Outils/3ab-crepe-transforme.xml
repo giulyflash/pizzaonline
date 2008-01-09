@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creperie>
+	<Crepes>
+		<Galette><Nom>Jambon</Nom><Ingredients>
+				<Ingredient>Jambon</Ingredient>
+			</Ingredients><Prix>4,00</Prix></Galette>
+		<Galette><Nom>Fromage</Nom><Ingredients>
+				<Ingredient>Emmental</Ingredient>
+			</Ingredients><Prix>4,00</Prix></Galette>
+		<Galette><Nom>Oeuf</Nom><Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+			</Ingredients><Prix>4,00</Prix></Galette>
+		<Galette><Nom>Oeuf et Jambon</Nom><Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+				<Ingredient>Jambon</Ingredient>
+			</Ingredients><Prix>5,00</Prix></Galette>
+		<Galette><Nom>Oeuf et Fromage</Nom><Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+				<Ingredient>Emmental</Ingredient>
+			</Ingredients><Prix>5,00</Prix></Galette>
+		<Galette><Nom>Printaniere</Nom><Ingredients>
+				<Ingredient>Oeuf</Ingredient>
+				<Ingredient>Salade</Ingredient>
+				<Ingredient>Tomate</Ingredient>
+			</Ingredients><Prix>6,00</Prix></Galette>
+		<Galette><Nom>Ty Breiz</Nom><Ingredients>
+				<Ingredient>Saucisse</Ingredient>
+				<Ingredient>Emmental</Ingredient>
+			</Ingredients><Prix>6,00</Prix></Galette>
+		<Galette><Nom>Crepe Maison</Nom><Ingredients>
+				<Ingredient>Jambon</Ingredient>
+				<Ingredient>Emmental</Ingredient>
+				<Ingredient>Champignon</Ingredient>
+			</Ingredients><Prix>6,00</Prix></Galette>
+		<Crepe><Nom>Crepe au sucre</Nom><Ingredients>
+				<Ingredient>Sucre</Ingredient>
+			</Ingredients><Prix>6,00</Prix></Crepe>
+	</Crepes>
+</Creperie>
