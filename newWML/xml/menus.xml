@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="AffMenu.xsl" type="text/xsl"?>
+
+<Menus>
+	<Menu>
+		<Nom>Solo</Nom>
+		<Galette>1</Galette>
+		<Crepe>1</Crepe>
+		<Boisson>1</Boisson>
+		<Prix>10,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Duo</Nom>
+		<Galette>2</Galette>
+		<Crepe>2</Crepe>
+		<Boisson>2</Boisson>
+		<Prix>15,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Crepe Dessert</Nom>
+		<Crepe>2</Crepe>
+		<Boisson>2</Boisson>
+		<Prix>15,00</Prix>
+	</Menu>
+	<Menu>
+		<Nom>Dessert</Nom>
+		<Dessert>2</Dessert>
+		<Boisson>2</Boisson>
+		<Prix>13,00</Prix>
+	</Menu>
+</Menus>

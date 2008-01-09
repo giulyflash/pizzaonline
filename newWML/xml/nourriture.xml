@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creperie>
+    <Titre>CREPERIE</Titre>
+	
+	<Galette id="2">
+		<Nom>Galette Maison</Nom>
+		<Prix>6,00</Prix>
+		<Ingredients>
+			<Ingredient>Jambon</Ingredient>
+			<Ingredient>Emmental</Ingredient>
+			<Ingredient>Champignon</Ingredient>
+		</Ingredients>
+	</Galette>
+	<Crepe id="1">
+		<Nom>Beurre Sucre</Nom>
+		<Prix>4,00</Prix>
+		<Ingredients>
+			<Ingredient>Beurre</Ingredient>
+			<Ingredient>Sucre</Ingredient>
+		</Ingredients>
+	</Crepe>
+	
+	<Boisson id="1">
+		<Nom>Coca</Nom>
+		<Prix>3,00</Prix>
+	</Boisson>
+	<Boisson id="2">
+		<Nom>Biere</Nom>
+		<Prix>4,00</Prix>
+	</Boisson>
+	<Dessert id="1">
+		<Nom>Brownie</Nom>
+		<Prix>4,00</Prix>
+	</Dessert>
+	<Dessert id="2">
+		<Nom>Tarte au citron</Nom>
+		<Prix>6,00</Prix>
+	</Dessert>
+<Crepe id="2"><Nom>tutu</Nom><Prix>123</Prix><Ingredients><Ingredient>Beurre</Ingredient></Ingredients></Crepe><Galette id="2"><Nom>pol3</Nom><Prix>14</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Champignon</Ingredient></Ingredients></Galette><Galette id="3"><Nom>lele</Nom><Prix>123</Prix><Ingredients><Ingredient>Beurre</Ingredient><Ingredient>Champignon</Ingredient><Ingredient>Emmental</Ingredient></Ingredients></Galette></Creperie>
