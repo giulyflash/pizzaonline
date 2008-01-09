@@ -2,6 +2,7 @@
 <?xml-stylesheet href="AffMenu.xsl" type="text/xsl"?>
 
 <Menus>
+    <Titre>CREPERIE</Titre>
 	<Menu>
 		<Nom>Solo</Nom>
 		<Galette>1</Galette>
