@@ -18,7 +18,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:apply-templates select="Creperie/Galette"/>
     </table>
     
-    <div class="title">Nos Crêpes</div>
+    <div class="title">Nos Crepes</div>
     <table>
       <tr>
         <th>Nom</th>
@@ -38,7 +38,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </tr>
 		<xsl:apply-templates select="Creperie/Boisson"/>
     </table>
-     <div class="title">Nos Déssert</div>
+     <div class="title">Nos Desserts</div>
     <table>
       <tr>
         <th>Nom</th>
@@ -135,6 +135,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         </tr>	
 	</xsl:template>
     <xsl:template match="Ingredients/Ingredient">
-    	<xsl:value-of select="."/>&#160;
+    	<xsl:value-of select="."/>
     </xsl:template>
 </xsl:stylesheet>
