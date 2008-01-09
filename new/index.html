@@ -2,17 +2,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Document sans nom</title>
+<title>Projet NAL Crepofolies</title>
 </head>
-	Cette page recense les différentes parties de notre projet.
+	<p>
+	Ce projet a été développé par Aurélien Fontich, Jennifer Henry, Laurent Gautho-Lapeyre et Erwan Pinault.
+	</p><p>
+	Nous avons choisi d'apporter une légère modification au sujet : nous effectuons des livraisons de crêpes et galettes bretonnes. 
+	Ce changement, à priori anodin, apporte une difficulté supplémentaire : il apparaît une distinction entre éléments salés et sucrés qui n'existait pas avec des pizzas.
+	Cependant, le reste du sujet a été scrupuleusement respecté. Nous avons construit le site internet : il propose la liste des crêpes, galettes, boissons et autre desserts,
+	les menus disponibles, la personnalisation des crêpes et galettes. Une fonction de recherche par ingrédient est disponible. Il dispose d'un mécanisme de connexion, avec inscription, indentification, gestion du profil, panier, historique des commandes...
+	</p><p>
+	Les données correspondant sont stockées dans une base de données et dans des fichiers XML. Les clients, les commandes, les stocks, la composition des éléments personnalisés et menus commandés par les clients sont stockés dans la base de données.
+	Les crêpes, galettes, boissons et autres desserts sont stockés dans le fichier 'nourriture.xml'. La composition générique des menus se trouve dans le fichier 'menus.xml'.
+	Nous sommes à votre disposition pour d'éventuelles explications supplémentaires concernant le stockage des données.
+	</p><p>
+	Le cuisinier et le gérant de la crêperie ne sont pas en reste. Le cuisinier dispose d'un interface qui lui affiche les commandes qu'il doit préparer. 
+	Pour chaque item commandé, il peut préciser s'il l'a préparé ou non : c'est uniquement une indication pour lui, la valeur n'a pas d'importance pour la suite du traitement de la commande. 
+	Lorsqu'il estime avoir terminé de préparer la commande, il la valide et peut passer aux suivantes. Une liste des ingrédients dont il risque de manquer bientôt est affichée. 
+	Le contenu de cette page est réactualisé régulièrement. 
+	L'administrateur (le gérant, le cuisinier...) peut ajouter, modifier et supprimer des galettes et crêpes, ajouter des ingrédients, boissons et desserts et modifier les stocks. 
+	</p><p>
+	Une version partielle du site client est disponible pour une consultation des services de notre crêperie sur un téléphone portable, au format WML.
+	Le mini-site a uniquement un but d'information, il ne propose pas de fonctionnalités de personnalisation par le client, en raison de la praticité limitée de la manipulation de site internet sur un téléphone.
+	Nous l'avons développé grâce au plugin 'wmlbrowser' de Mozilla Firefox. 
+	</p><p>
+	Une génération de PDF est disponible. En actualisant correspondante la page une fois, les pdf 'nourriture.xml' et 'menus.xml' sont générés dans le dossier 'pdf'.
+	</p><p>
+	Nous avons travaillé avec le groupe composé de Aurélien Fontich, Antoine Langevin, Aline Soichi et Bruno Gollion pour la fusion de nos deux sites. Elle a réalisée dans un seul sens : leurs données intégrées dans les notres.
+	Le processus est donc identique à celui rendu par ce groupe. Le dossier s'appelle '3ABversJELS' d'après les initiales des membres de nos deux groupes. 
+	Il faut exporter leur base de données au format SQL afin de l'installer sur le poste, copier leurs fichiers XML dans le dossier '3AB' et les notres dans 'JELS', puis actualiser la page php correspondante.
+	Les données sont intégrées dans notre base de données existante, et les nouveaux fichiers XML se trouvent dans le dossier 'fusion'.
+	</p><p>
+	Le développement a été effectué sous PHPMyAdmin et MySQL. Les pages doivent être lancées depuis ce serveur. Le fichier de la base 'creation_table.sql' doit être lancé avant toute manipulation pour créer la base données sur le poste.
+	</p>
+	<br/>
 	<h1><a href="index.php5">Site principal</a></h1>
-    Site qui permet au client de consulter les crêpres/galettes,les menus, créer ses propres compositions, et si il est inscrit valider sa commande et verifier son historique
 	<h1><a href="indexAdmin.php5">Site d'administration</a></h1>
-    Site permettant au gérant de la crêperie de gérer ces commandes, modifier ces crêpes "standard".
-	<h1><a href="indexAdmin.php5">Site wap</a></h1>
-    Version wap du site
-	<h1><a href="indexAdmin.php5">Génération pdf pour les menus</a></h1>
-    Version imprimable de la liste des menus
+	<h1><a href="../WML/index.php5">Site wap</a></h1>
+	<h1><a href="pdf/convertPDF.php">Génération pdf pour les menus</a></h1>
+	<h1><a href="3ABversJELS/fusion.php">Fusion avec le second site</a></h1>
 <body>
 </body>
 </html>

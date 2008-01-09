@@ -3,15 +3,29 @@
 	{
 		return(confirm('La commande est prête à être livrée ?'));
 	}
+	function RefreshPage() { 
+		window.location.href = "http://localhost/new/new/indexAdmin.php5?page=commandes"; 
+	} 
+	setTimeout(RefreshPage, 300000); 
 </script>
 <?php
-	echo "<h1>Liste des commandes en cours</h1>";
 	require('outils/outilsBD.php');
+	echo "<h1>Liste des items en pénurie</h1>";
+	$res = queryDB("SELECT * FROM commandes WHERE livre=0 ORDER BY date, heure", 'select');
+	$i=1;
+	$row = mysql_fetch_assoc($res);
+	if ($row == 0) {
+		echo "Aucune item en pénurie.";
+	}
+	while($row){
+	}
+	echo "<h1>Liste des commandes en cours</h1>";
 	$res = queryDB("SELECT * FROM commandes WHERE livre=0 ORDER BY date, heure", 'select');
 	$i=1;
 	$row = mysql_fetch_assoc($res);
 	if ($row == 0) {
 		echo "Aucune commande en cours.";
+		$row = mysql_fetch_assoc($res);
 	}
 	while($row){
 		$idCommande = $row["id"];

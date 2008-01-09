@@ -1,9 +1,9 @@
 <?php
-    include('configuration.php');
+    include('Outils/configuration.php');
     connexionBD();
     // CREPES ///////////////////////////////////////////////////////////////////////////
     // transformation du fichier 3AB au format JELS
-    /*$xml = new DOMDocument;
+    $xml = new DOMDocument;
     $xml->load("3AB/Crepe.xml");
     $xsl = new DOMDocument;
     $xsl->load("Outils/transfo-crepes.xsl");
@@ -35,10 +35,10 @@
         fwrite($xmlIn, "\t<Dessert>\n\t\t<Nom>$nom</Nom>\n\t\t<Prix>4,00</Prix>\n\t</Dessert>\n");
         $row = mysql_fetch_assoc($res);
     }
-    fwrite($xmlIn, "</Creperie>\n");*/
+    fwrite($xmlIn, "</Creperie>\n");
     // MENUS ///////////////////////////////////////////////////////////////////////////
     // transformation du fichier 3AB au format JELS
-    /*$xml = new DOMDocument;
+    $xml = new DOMDocument;
     $xml->load("3AB/menu.xml");
     $xsl = new DOMDocument;
     $xsl->load("Outils/transfo-menus.xsl");
@@ -82,14 +82,13 @@
         ."SELECT nom, quantite, 10, 0, 2, 0 " // ingr, qte, seuil, crepable, px, sucre
         ."FROM `la-galette-orceenne`.boissons "
         ."WHERE nom NOT IN (SELECT ingredient FROM crepes2.stocks)"
-    );*/
+    );
 
-    
     $erreur = mysql_select_db("crepes2");
 
     // COMMANDES ET ITEMS MENU
     $dom_object = new DomDocument();
-    $dom_object->load("commandes.xml");
+    $dom_object->load("3AB/commandes.xml");
     $xpath = new Domxpath($dom_object);
     $result = $xpath->query("//Commande");
     foreach ($result as $commande) {
@@ -175,12 +174,7 @@
             envoiRequete ("INSERT INTO itemscommandes "
                          ."VALUES ('$idCommande', '".$dessert->nodeValue."', 'Dessert', 1, 0)");
         }
-
-
-
-            
         // galette perso
-
         $result2 = $xpath->query("Crepes/CrepesSalees/CrepePersoSalee", $commande);
         foreach ($result2 as $crepepersosalee) {
             echo "Perso (";                                         
@@ -219,7 +213,6 @@
         echo "<br/>";
         echo "<br/>";
     }
-    // PERSOS
     function lireEtEcrire ($nomFileFrom, $fileTo, $balise) {
         $fileFrom = fopen($nomFileFrom, "r");
         $txt = "";
