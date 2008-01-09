@@ -27,4 +27,16 @@
         ?>
 	</table>
     
-<div class="title">Ajouter de nouveau ingrédients</div>
+<div class="title">Ajouter un nouveau ingrédient</div>
+<form action="indexAdmin.php5?page=ajoutIngredient" method="post">
+<table>
+    	<tr><td> Saveur </td><td> Sucré <input type="checkbox" name = "optionSaveur[]" value = "sucre"/> Salé <input type="checkbox" name = "optionSaveur[]" value="sale" /> </td></tr>
+        <tr><td> Type </td><td> Ingrédient <input type="radio" name = "type" checked="checked" value="ingredient" /> Autre <input name = "type" type="radio" value="autre"/> </td></tr>
+        <tr><td> Nom </td><td> <input type="text" name = "nom" /> </td></tr>
+        <tr><td> Coût </td><td> <input type="text" name = "cout" /> </td></tr>
+        <tr><td> Quantité </td><td> <input type="text" name = "quantite" /> </td></tr>
+        <tr><td> Seuil </td><td> <input type="text" name = "seuil" /> </td></tr>
+</table>
+<center><input type="submit" value = "ajouter" /></center>
+</form>
+    	
