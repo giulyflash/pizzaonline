@@ -61,7 +61,7 @@
 		echo '</table>';
 	}
 ?>
-<h1>Vos menu</h1>
+<h1>Vos menus</h1>
 <?php
 	if(empty($_SESSION['panier']['menu']))
 	{
