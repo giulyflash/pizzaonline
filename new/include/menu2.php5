@@ -32,7 +32,7 @@
 			for($i=0;$i<$Galettemenu->nodeValue;$i++){
 				echo " Galette ".($i+1).": <select name='galette".($i+1)."' id='galette".($i+1)."' size=1 >"; $galette=selectItem($listeGalettes,1); 
 				echo "</select>";
-				$id_galette = $galette->getAttribute("id");
+				$id_galette = $Galettemenu->getAttribute("id");
 				$idmenu .= $id_galette;
 				echo "<input type='hidden' name='idgalette".($i+1)."' value='".$id_galette. "' />";
 			}
@@ -44,7 +44,7 @@
 			for($i=0;$i<$Crepemenu->nodeValue;$i++){
 				echo " Crêpe ".($i+1).": <select name='crepe".($i+1)."' id='crepe".($i+1)."' size=1 >"; $crepe=selectItem($listeCrepes,1); 
 				echo "</select>";
-				$id_crepe = $crepe->getAttribute("id");
+				$id_crepe = $Crepemenu->getAttribute("id");
 				$idmenu .= $id_crepe;
 				echo "<input type='hidden' name='idcrepe".($i+1)."' value='".$id_crepe. "' />";
 			}
@@ -56,7 +56,7 @@
 			for($i=0;$i<$Boissonmenu->nodeValue;$i++){
 				echo " Boisson ".($i+1).": <select name='boisson".($i+1)."' id='boisson".($i+1)."' size=1 >"; $boisson=selectItem($listeBoissons,1); 
 				echo "</select>";
-				$id_boisson = $boisson->getAttribute("id");
+				$id_boisson = $Boissonmenu->getAttribute("id");
 				$idmenu .= $id_boisson;
 				echo "<input type='hidden' name='idboisson".($i+1)."' value='".$id_boisson. "' />";
 			}
