@@ -5,7 +5,7 @@
 	
 	if($connecte)
 	{
-		$res = queryDB("SELECT * FROM commandes WHERE client=".$_SESSION['user_id']." ORDER BY date, heure", 'select');
+		$res = queryDB("SELECT * FROM commandes WHERE client=".$_SESSION['user_id']." ORDER BY date DESC, heure DESC", 'select');
 		$i=1;
 		$row = mysql_fetch_assoc($res);
 		if ($row == 0) {

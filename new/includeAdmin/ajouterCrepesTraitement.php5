@@ -11,6 +11,10 @@
         {
             echo '<div class="title">Erreur</div>Aucun prix indiqué.';
         }
+		else if($_POST['prix'] < 0)
+        {
+            echo '<div class="title">Erreur</div>Le prix doit être positif.';
+        }
         else
         {
             $racine = $dom->documentElement;

@@ -22,6 +22,7 @@
                         <li><a href="indexAdmin.php5?page=commandes">Commandes</a></li>
                         <li><a href="indexAdmin.php5?page=ajouterCrepes">Ajouter Galettes<br />/Crepes</a></li>
                         <li><a href="indexAdmin.php5?page=modifierSupprimerCrepes">Modifier Galettes<br />/Crepes</a></li>
+                        <li><a href="indexAdmin.php5?page=modifierIngredientsForm">Modifier stock</a></li>
                     </ul>
                 </div>
             	<div id="nav_footer"></div>

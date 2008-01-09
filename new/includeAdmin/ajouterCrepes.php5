@@ -22,8 +22,8 @@
                 }
         ?>
       </table>
-      <label> Nom (facultatif) </label> <input type="text" name="nom"/>
-      <label> Prix (obligatoire)</label> <input type="text" name="prix"/>
+      <label> Nom (facultatif) </label> <input type="text" name="nom" />
+      <label> Prix (obligatoire)</label> <input type="text" name="prix" value="5"/>
       <input type="submit" value = "Créer" />
 </form>
 
@@ -51,6 +51,6 @@
         ?>
      </table>
      <label> Nom (facultatif)</label> <input type="text" name="nom"/>
-     <label> Prix (obligatoire)</label> <input type="text" name="prix"/>
+     <label> Prix (obligatoire)</label> <input type="text" name="prix" value="5"/>
      <input type="submit" value = "Créer" />
  </form> 

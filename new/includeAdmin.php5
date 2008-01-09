@@ -57,6 +57,21 @@
 			$title="Modifier ou supprimer une crêpes ou une gâlette";
 			break;
 			
+			case "modifierIngredientsForm":
+			$page="includeAdmin/modifierIngredientsForm.php5";
+			$title="Mettre a jour ou ajouter de nouveau ingredient";
+			break;
+			
+			case "miseAjourIngredient":
+			$page="includeAdmin/miseAjourIngredient.php5";
+			$title="Mettre a jour les ingredients";
+			break;
+			
+			case "ajoutIngredientTraitement":
+			$page="includeAdmin/ajoutIngredient.php5";
+			$title="Ajouter de nouveau ingredient";
+			break;
+			
 			
 		}
 	}
