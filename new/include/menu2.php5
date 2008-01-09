@@ -1,4 +1,3 @@
-
 <div class="title">Nos menu</div>
 <?php
  	include_once 'fonctions.php5';
@@ -30,7 +29,8 @@
 		if (is_object($Galettemenu)) {
 			echo "<input type='hidden' name='nbgalette' value='".$Galettemenu->nodeValue. "' />";
 			for($i=0;$i<$Galettemenu->nodeValue;$i++){
-				echo " Galette ".($i+1).": <select name='galette".($i+1)."' id='galette".($i+1)."' size=1 >"; $galette=selectItem($listeGalettes,1); 
+				echo " Galette ".($i+1).": <select name='galette".($i+1)."' id='galette".($i+1)."' size=1 >";
+				selectItem($listeGalettes,1); 
 				echo "</select>";
 				$id_galette = $Galettemenu->getAttribute("id");
 				$idmenu .= $id_galette;

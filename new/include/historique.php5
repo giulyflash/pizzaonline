@@ -1,4 +1,4 @@
-<h1>Historique de vos commandes<h1>
+<h1>Historique de vos commandes</h1>
 <?php
 	require('outils/outilsBD.php');
 	require('fonctions.php5');
