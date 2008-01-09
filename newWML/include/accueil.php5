@@ -1,3 +1,3 @@
 <?php
-	echo "<center>  Bienvenue sur crepofolies, le site qui comblera vos envies</center>";
+	echo "<center>  Bienvenue sur crepofolies, le site qui comblera vos envies</center><br/>";
 ?>
