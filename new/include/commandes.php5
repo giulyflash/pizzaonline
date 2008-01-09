@@ -7,7 +7,8 @@
 	$res = queryDB("SELECT * FROM commandes WHERE id=".$idCommande." ORDER BY date, heure", 'select');
 	$row = mysql_fetch_assoc($res);
 	$date = $row["date"];
-	echo "Commande passée le ".datefr($date)." <br/>";
+	$heure = $row["heure"];
+	echo "Commande passée le ".datefr($date)." à $heure <br/>";
 ?>
 <h1>Vos articles</h1>
 <?php
@@ -136,7 +137,7 @@
 									echo "<td>".$quantite."</td>"; 
 									echo "<td>
 									<form action='index.php5?page=ajouter_article' method='post'>
-									<input type='hidden' name='type' value='Boisson' />
+									<input type='hidden' name='type' value='Dessert' />
 									<input type='hidden' name='description' value='".$item."' />
 									<input type='hidden' name='id' value='".$item."' />
 									<input type='hidden' name='prix' value='".$ing->nodeValue."' />
@@ -154,7 +155,7 @@
 					echo "</table>";
 				}
 ?>
-<h1>Vos menu</h1>
+<h1>Vos menus</h1>
 <?php
 				// menus
 				$res3 = queryDB("SELECT item, type, quantite, pret FROM itemscommandes WHERE commande=".$idCommande." AND type='Menu'", 'select');
@@ -241,9 +242,6 @@
 								<th>
 									Quantite
 								</th>
-								<th>
-									Commander
-								</th>
 							</tr>';
 					while($row3)
 					{
@@ -268,7 +266,6 @@
 							}
 							echo "</td><td>prix ".$prix_perso."</td>"; 
 							echo "<td>".$quantite."</td>"; 
-							echo "<td>....</td>"; 
 							echo"</tr>"; 
 						}
 						// item suivant

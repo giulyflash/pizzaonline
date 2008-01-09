@@ -23,7 +23,7 @@
                 	<?php
 						if($connecte)
 						{
-							echo 'Vous etes connectes en tant que : <a href="index.php5?page=profil">'.$login_name.'</a><br />
+							echo 'Vous êtes connecté en tant que : <a href="index.php5?page=profil">'.$login_name.'</a><br />
 							<img src="interf/historique.png" /> <a href="index.php5?page=historique">Historique</a><br/>
 							<img src="interf/logout.png" /> <a href="index.php5?page=deconnexion">Déconnexion</a>';
 						}
@@ -49,8 +49,8 @@
                     <ul>
                         <li><a href="index.php5?page=accueil">Accueil</a></li>
                         <li><a href="index.php5?page=menu">Nos menus</a></li>
-                        <li><a href="index.php5?page=noscrepes">Nos Galettes<br />/Crepes</a></li>
-                        <li><a href="index.php5?page=voscrepes">Vos Galettes<br />/Crepes</a></li>
+                        <li><a href="index.php5?page=noscrepes">Nos Galettes<br />et Crepes</a></li>
+                        <li><a href="index.php5?page=voscrepes">Vos Galettes<br />et Crepes</a></li>
                         <li><a href="index.php5?page=recherche">Rechercher</a></li>
                         <li><a href="index.php5?page=panier">Votre panier</a></li>
                     </ul>

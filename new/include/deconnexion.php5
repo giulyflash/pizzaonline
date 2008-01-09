@@ -1,2 +1,2 @@
 <h1>Déconnexion réussie</h1>
-Vous êtes maintenant déconnectés.
+Vous êtes maintenant déconnecté.

@@ -16,7 +16,7 @@
 			// date et heure de la commande
 			$date = $row["date"];
 			$heure = $row["heure"];
-			echo "<a href='index.php5?page=commandes&idcommande=".$idCommande."'>Commande passée le ".datefr($date)." à  $heure</a><br/>";
+			echo "<a href='index.php5?page=commandes&idcommande=".$idCommande."'>Commande passée le ".datefr($date)." à $heure</a><br/>";
 			$row = mysql_fetch_assoc($res);
 			$i++;
 		}

@@ -7,7 +7,7 @@
 	else
 	{
 		echo '<h1>Connexion réussie</h1>
-		Vous êtes maintenant connectés.
+		Vous êtes maintenant connecté.
 		Vous pouvez faire votre commande ou modifier votre profil.';
 	}
 ?>

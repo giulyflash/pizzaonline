@@ -23,7 +23,7 @@
 			else
 			{
 				$query='INSERT INTO client(login, password, nom, prenom, adresse, codepostal, ville, telephone) VALUES (\''.mysql_real_escape_string($_POST['login']).'\', \''.mysql_real_escape_string($_POST['password']).'\', \''.mysql_real_escape_string($_POST['nom']).'\', \''.mysql_real_escape_string($_POST['prenom']).'\', \''.mysql_real_escape_string($_POST['adresse']).'\', \''.mysql_real_escape_string($_POST['ville']).'\', \''.mysql_real_escape_string($_POST['code_postal']).'\', \''.mysql_real_escape_string($_POST['telephone']).'\')';
-				echo $query;
+				//echo $query;
 				if(db_query($query))
 				{
 					echo '<h1>Inscription terminée</h1>Vous pouvez à present vous identifier avec le nom d\'utilisateur et le mot de passe que vous avez indiqués.';
