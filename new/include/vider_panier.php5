@@ -1,9 +1,9 @@
-<h1>Suppression d'éléments du panier</h1>
+<h1>Suppression d'Ã©lÃ©ments du panier</h1>
 <?php
 	if(empty($_GET['type']) || $_GET['type']=="tous")
 	{
 		unset($_SESSION['panier']);
-		echo "Vous venez de vider entièrement votre panier.";
+		echo "Vous venez de vider entiÃ¨rement votre panier.";
 		echo '<br /><a href="index.php5?page=panier">Voir votre panier</a>';
 	}
 	else
@@ -23,7 +23,7 @@
 			break;
 			
 			case "perso":
-			echo "Vous venez de supprimer tous les crêpes personnalisées de votre panier.";
+			echo "Vous venez de supprimer tous les crÃªpes personnalisÃ©es de votre panier.";
 			echo '<br /><a href="index.php5?page=panier">Voir votre panier</a>';
 			unset($_SESSION['panier']['perso']);
 			break;

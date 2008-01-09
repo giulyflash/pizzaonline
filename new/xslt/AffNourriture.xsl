@@ -135,6 +135,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         </tr>	
 	</xsl:template>
     <xsl:template match="Ingredients/Ingredient">
-    	<xsl:value-of select="."/>
+    	<xsl:value-of select="."/>&#160;
     </xsl:template>
 </xsl:stylesheet>

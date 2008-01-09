@@ -22,7 +22,7 @@
             $res1 = queryDB("SELECT ingredient, prix, sucresale FROM stocks WHERE crepable = 1 and (sucresale = 1 or sucresale = 2) ", 'select');
             $row1 = mysql_fetch_assoc($res1);
             if ($row1 == 0) {
-                echo "Erreur aucun ingredients présent en base";
+                echo "Erreur aucun ingredients prÃ©sent en base";
             }
             while($row1){
 				$ingre = $row1["ingredient"];
