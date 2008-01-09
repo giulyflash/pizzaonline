@@ -11,13 +11,14 @@
 <?php
 	require('outils/outilsBD.php');
 	echo "<h1>Liste des items en pénurie</h1>";
-	$res = queryDB("SELECT * FROM commandes WHERE livre=0 ORDER BY date, heure", 'select');
+	$res = queryDB("SELECT ingredient FROM stocks WHERE quantite < seuil", 'select');
 	$i=1;
 	$row = mysql_fetch_assoc($res);
 	if ($row == 0) {
 		echo "Aucune item en pénurie.";
 	}
 	while($row){
+		$row = mysql_fetch_assoc($res);
 	}
 	echo "<h1>Liste des commandes en cours</h1>";
 	$res = queryDB("SELECT * FROM commandes WHERE livre=0 ORDER BY date, heure", 'select');
@@ -25,7 +26,6 @@
 	$row = mysql_fetch_assoc($res);
 	if ($row == 0) {
 		echo "Aucune commande en cours.";
-		$row = mysql_fetch_assoc($res);
 	}
 	while($row){
 		$idCommande = $row["id"];
