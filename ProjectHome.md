@@ -1,0 +1,1 @@
+Pizza online décide de moderniser sa gestion et décide de créer un site internet au moyen duquel les clients pourront commander eux-même leur menu. Imprimer ce menu ou même consulter les informations du site par Wap au moyen de leur téléphone portable.
